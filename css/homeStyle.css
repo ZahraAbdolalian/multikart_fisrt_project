@@ -1,0 +1,135 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+    
+}
+
+/* header top*/
+
+.header{   
+    
+    
+}
+
+.header_top{
+    color: rgb(153, 153, 153);
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 18px 40px;
+}
+
+.header_list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.welcome , .call{
+    padding-right: 25px;
+}
+
+.header_list_item{
+    padding-left: 25px;
+}
+
+.header_top_link{
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+    transition: all 0.5s ease 0s;
+}
+
+.compare:hover , .wishlist:hover{
+    color: rgb(228, 96, 74);
+}
+
+.header_top_left_contents{
+    display: flex;
+}
+
+.header_top_right_contents{
+    display: flex;
+}
+
+.my_account{
+    /* position: relative; */
+}
+
+.acount_hover{
+    min-width: 160px;
+    background-color: #fff;
+    position: absolute;
+    top:24px;
+    right: 0;
+    color: black;
+    padding: 10px 20px;
+    transform: translateY(30px);
+    transition: all linear 0.3s;
+    z-index: 10;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 0 1px #ccc;
+}
+
+.login_hover, .Logout_hover{
+    margin: 10px;
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.login_hover:hover, .Logout_hover:hover{
+    color: rgb(228, 96, 74);
+}
+
+.header_dropdown:hover .acount_hover{
+    opacity: 1;
+    transform: translateY(30px);
+    visibility: visible;
+}
+
+.call::before{
+    content: "\f095";
+    font: var(--fa-font-solid);
+    padding-right: 10px;
+    font-size: 12px;
+    color: rgb(228, 96, 74);
+}
+
+.my_account::after{
+    content: "\f107";
+    font: var(--fa-font-solid);
+}
+
+.compare::before {
+    content: "\f074";
+    padding-right: 6px;
+    font: var(--fa-font-solid);
+}
+
+.wishlist::before {
+    content: "\f004";
+    padding-right: 6px;
+    font: var(--fa-font-solid);
+}
+
+.my_account_link::before {
+    content: "\f007";
+    padding-right: 6px;
+    font: var(--fa-font-solid);
+}
