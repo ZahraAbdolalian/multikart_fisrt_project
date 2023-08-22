@@ -213,4 +213,32 @@ trendingArray2.forEach(product => {
 
 })
 
+// recent_story
+let recentStoryBox = $.querySelector(".recent_story_box")
 
+let storyArray = [
+    {src:'images/recent1.jpg',time:'25 January 2018'},
+    {src:'images/recent2.jpg',time:'26 January 2018'},
+    {src:'images/recent3.jpg',time:'27 January 2018'}
+]
+
+storyArray.forEach(story => {
+    recentStoryBox.insertAdjacentHTML('beforeend',
+    ` <div class="recent_detail">
+    <a href="#">
+        <div class="recent_img_box">
+            <img class="recent_img" src="${story.src}" alt="recent story">
+            
+        </div>
+    </a>
+    <div class="recent_info">
+        <h4 class="recent_h4">${story.time}</h4>
+        <a href="">
+            <p class="recent_text">Lorem ipsum dolor sit consectetur adipiscing elit,</p>
+        </a>
+        <hr class="recent_line">
+        <p class="recent_author">by:John Dio , 2 Comment</p>
+    </div>
+    </div>`
+    )
+})

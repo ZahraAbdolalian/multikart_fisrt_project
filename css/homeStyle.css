@@ -642,9 +642,7 @@ a {
     text-align: center;
 }
 
-
-.trending_title_h2,
-.special_title_h2 {
+.title_h2 {
     text-align: center;
     font-size: 36px;
     color: #222222;
@@ -1116,5 +1114,90 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
+
+/* recent_story */
+
+.recent_story{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #f1f5f4;
+}
+
+.recent_container{
+    max-width: 1400px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0 auto;
+    
+}
+
+.recent_story_box{
+    display: flex;
+}
+
+.recent_detail{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 458.667px;
+}
+
+.recent_img_box{
+    position: relative;
+    overflow: hidden;
+}
+
+.recent_img{
+    width: 100%;
+    height: auto;
+}
+
+.recent_info{
+    text-align: center;
+    
+}
+
+.recent_h4,
+.recent_text{
+    font-size: 18px;
+    letter-spacing: 0.54px;
+}
+
+.recent_h4{
+    line-height: 1;
+    font-weight: 400;
+    color: rgb(228, 96, 74);
+    margin-top: 25px;
+}
+
+.recent_text{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+    line-height: 1.5;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+}
+
+.recent_text:hover {
+    color: rgb(228, 96, 74);
+    transition: all 0.5s ease;
+}
+
+.recent_line{
+    width: 75px;
+    height: 3px;
+    background-color: rgb(228, 96, 74);
+    margin: 0 auto;
+    margin-top: 13px;
+    margin-bottom: 16px;
+}
+
+.recent_author{
+    color:#777777;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.4px;
+    line-height: 14px;
+}
+
