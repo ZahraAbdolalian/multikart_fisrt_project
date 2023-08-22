@@ -144,7 +144,7 @@ let trendingArray2 = [
 trendingArray2.forEach(product => {
 
     trendingContainer2.insertAdjacentHTML('beforeend',
-        ` <div class="trending_product_part2">
+        `<div class="trending_product_part2">
         <div class="trending_product_box">
             <div class="trending_img_box_part2">
                 <span class="trending_new">
@@ -212,3 +212,5 @@ trendingArray2.forEach(product => {
     }
 
 })
+
+
