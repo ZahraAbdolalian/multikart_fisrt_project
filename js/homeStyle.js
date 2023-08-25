@@ -1,42 +1,39 @@
 let $ = document
 
-// let portfolio_item = $.querySelector("#portfolio_item")
-// let add_item = $.querySelector("#add_item")
+// header
+let backBtn = $.querySelector('.back_btn')
+let sidebar = $.querySelector('.sidebar')
+let openSidebar = $.querySelector('.open_sidebar')
+let sidebarMenu = $.querySelector('.sidebar_menu')
+let sidebarListHov = $.querySelectorAll('.sidebar_list_hov')
+let sidebarOpen = $.querySelector('.sidebar_open')
 
-// let portfolioArray = [
-//     'Portfolio Grid 2',
-//     'Portfolio Grid 3',
-//     'Portfolio Grid 4',
-//     'Masonry-Grid-2',
-//     'Masonry-Grid-3',
-//     'Masonry-Grid-4',
-//     'Masonry-Full-Width'
-// ]
+backBtn.addEventListener('click', () => {
+    sidebar.classList.remove('open')
+    console.log(sidebar);
+})
+sidebarOpen.addEventListener('click', () => {
+    sidebar.classList.remove('open')
+    console.log(sidebar);
+})
 
-// let addArray = [
-//     'Cart Right',
-//     'Cart Left',
-//     'Cart Top',
-//     'Cart Bottom',
-//     'Cart-Model-Popup'
-// ]
+openSidebar.addEventListener('click', () => {
+    sidebar.classList.add('open')
+    console.log(sidebar);
+})
 
-// portfolioArray.forEach(item => {
-//     portfolio_item.insertAdjacentHTML('beforeend',
-//     `<li class="list_hov_item submenu_item_hov">
-//         <a href="#" class="list_hov_link">${item}</a>
-//     </li>`
-//     )
-// })
+console.log(sidebarListHov);
 
-// addArray.forEach(item => {
-//     add_item.insertAdjacentHTML('beforeend',
-//     `<li class="list_hov_item submenu_item_hov">
-//         <a href="#" class="list_hov_link">${item}</a>
-//     </li>`
-//     )
-// })
-
+sidebarListHov.forEach(item => {
+    item.addEventListener('mouseover' , () => {
+        sidebarMenu.classList.add('sidebar_unset')
+    })
+})
+sidebarListHov.forEach(item => {
+    item.addEventListener('mouseout' , () => {
+        sidebarMenu.classList.remove('sidebar_unset')
+    })
+})
 
 // trending part1
 
@@ -122,7 +119,7 @@ trendingArray.forEach(product => {
 
     if (product.onsale) {
         trendingImgBox[product.id - 1].insertAdjacentHTML('afterbegin',
-        `<span class="trending_on_sale">
+            `<span class="trending_on_sale">
             on sale
         </span>`
         )
@@ -135,10 +132,10 @@ trendingArray.forEach(product => {
 let trendingContainer2 = $.querySelector('.trending_container_part2')
 
 let trendingArray2 = [
-    { id: 1, src: 'images/trending1.jpg', name: 'Watch 1', discountedPrice: '$156.00', price: '$260.00', colors: 'silver', onsale: false},
-    { id: 2, src: 'images/trending2.jpg', name: 'Watch 2', discountedPrice: '$207.00', price: '$345.00', colors: 'silver sienna', onsale: false},
-    { id: 3, src: 'images/trending3.jpg', name: 'Watch 3', discountedPrice: '$356.00', price: '$445.00', colors: 'navy', onsale: true},
-    { id: 4, src: 'images/trending4.jpg', name: 'Watch 4', discountedPrice: '$466.40', price: '$530.00', colors: 'bisque', onsale: true},
+    { id: 1, src: 'images/trending1.jpg', name: 'Watch 1', discountedPrice: '$156.00', price: '$260.00', colors: 'silver', onsale: false },
+    { id: 2, src: 'images/trending2.jpg', name: 'Watch 2', discountedPrice: '$207.00', price: '$345.00', colors: 'silver sienna', onsale: false },
+    { id: 3, src: 'images/trending3.jpg', name: 'Watch 3', discountedPrice: '$356.00', price: '$445.00', colors: 'navy', onsale: true },
+    { id: 4, src: 'images/trending4.jpg', name: 'Watch 4', discountedPrice: '$466.40', price: '$530.00', colors: 'bisque', onsale: true },
 ]
 
 trendingArray2.forEach(product => {
@@ -196,7 +193,6 @@ trendingArray2.forEach(product => {
     trendingColorList = $.querySelectorAll('.trending_color_list_part2')
     colorsArray = product.colors.split(' ')
     trendingImgBox = $.querySelectorAll('.trending_img_box_part2')
-    console.log(trendingImgBox);
     colorsArray.forEach(color => {
         trendingColorList[product.id - 1].insertAdjacentHTML('beforeend',
             `<li class="${color} trending_color"></li>`
@@ -205,7 +201,7 @@ trendingArray2.forEach(product => {
 
     if (product.onsale) {
         trendingImgBox[product.id - 1].insertAdjacentHTML('afterbegin',
-        `<span class="trending_on_sale">
+            `<span class="trending_on_sale">
             on sale
         </span>`
         )
@@ -217,18 +213,18 @@ trendingArray2.forEach(product => {
 let recentStoryBox = $.querySelector(".recent_story_box")
 
 let storyArray = [
-    {src:'images/recent1.jpg',time:'25 January 2018'},
-    {src:'images/recent2.jpg',time:'26 January 2018'},
-    {src:'images/recent3.jpg',time:'27 January 2018'}
+    { src: 'images/recent1.jpg', time: '25 January 2018' },
+    { src: 'images/recent2.jpg', time: '26 January 2018' },
+    { src: 'images/recent3.jpg', time: '27 January 2018' }
 ]
 
 storyArray.forEach(story => {
     recentStoryBox.insertAdjacentHTML('beforeend',
-    ` <div class="recent_detail">
+        ` <div class="recent_detail">
     <a href="#">
         <div class="recent_img_box">
             <img class="recent_img" src="${story.src}" alt="recent story">
-            
+            <span class="recent_effect"></span>
         </div>
     </a>
     <div class="recent_info">
