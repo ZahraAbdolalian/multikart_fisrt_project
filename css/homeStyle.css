@@ -14,6 +14,78 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.dark{
+    background-color: #2b2b2b;
+    color: #cfd4da;
+    transition: all 0.3s ease;
+}
+.dark .header_top {
+    color: #cfd4da;
+}
+.dark .header_top_container{
+    background-color: #232323;
+    transition: all 0.3s ease;
+}
+.dark a{
+    color: #cfd4da;
+}
+.dark .header_bottom_right_icon img{
+    filter: brightness(100);
+}
+.dark .brand_img img{
+    filter: invert(100);
+}
+.dark .category_product_box {
+    border-color: #404040;
+}
+.dark .category_title{
+    color: #e7eaec;
+}
+.dark .trending_products_part1 {
+    background-color: #232323;
+    transition: all 0.3s ease;
+}
+.dark h2 {
+    color: #f1f3f5;
+}
+.dark .trending_icons_part2,
+.dark .special_icons{
+    background-color: #2b2b2b;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+.dark .recent_story{
+    background-color: #404040;
+    transition: all 0.3s ease;
+}
+.dark h4{
+    color: #e7eaec;
+}
+.dark p {
+    color: #cfd4da;
+}
+.dark .service_container ,
+.dark .service_container div {
+    border-color: #404040;
+}
+.dark .footer_container{
+    background-color: #232323;
+    transition: all 0.3s ease;
+}
+.dark .footer_top,
+.dark .footer_top_left{
+    border-color: #404040;
+}
+.dark .footer_input{
+    color: #cfd4da;
+    background-color: #2b2b2b;
+    transition: all 0.3s ease;
+    border: 1px solid #404040;
+}
+.dark .dark_light_btn{
+    background-color: #000000;
+    box-shadow: none;
+}
 ul {
     list-style-type: none;
 }
@@ -975,7 +1047,7 @@ a {
 }
 
 .selected {
-    color: rgb(228, 96, 74);
+    color: rgb(228, 96, 74) !important;
 }
 
 .trending_list_link {

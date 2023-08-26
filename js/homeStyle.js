@@ -306,3 +306,8 @@ storyArray.forEach(story => {
     )
 })
 
+let darkLightBtn = $.querySelector('.dark_light_btn')
+
+darkLightBtn.addEventListener('click', () => {
+    $.body.classList.toggle('dark')
+})
