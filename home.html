@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MultiKart Ecommerce Angular 15 | Angular Ecommerce Template</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +18,11 @@
 </head>
 
 <body class="">
+    <div class="loader">
+        <div class="line_loader"></div>
+        <div class="circle_loader"></div>
+    </div>
+
     <div class="top_btn">
         <i class="fa fa-angle-double-up"></i>
     </div>
@@ -41,8 +47,9 @@
                             </li>
                             <div class="header_dropdown">
                                 <li class="header_list_item my_account">
-                                    <a class="header_top_link my_account_link" href="#"><i class="fa fa-user"></i>My
-                                        Account</a>
+                                    <a class="header_top_link my_account_link" href="#">
+                                        <i class="fa fa-user"></i>
+                                        My Account</a>
                                     <ul class="item_hover my_account_hov">
                                         <li class="login_hover"> <a href="#">Login</a> </li>
                                         <li class="Logout_hover"> <a href="#">Logout</a> </li>
@@ -675,7 +682,7 @@
                                 <img class="icon_img"
                                     src="https://angular.pixelstrap.com/multikart/assets/images/icon/cart.png"
                                     alt="cart">
-                                <ul class="item_hover cart_hov">
+                                <ul class="item_hover setting">
                                     <h5 class="cart_message">Your cart is currently empty.</h5>
                                 </ul>
                             </li>

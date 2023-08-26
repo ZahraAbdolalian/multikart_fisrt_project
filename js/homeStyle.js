@@ -1,5 +1,14 @@
 let $ = document
 
+//load
+
+let loader = $.querySelector('.loader')
+
+window.addEventListener('load', () => {
+    loader.style.display = 'none'
+})
+
+
 // top_btn
 let topBtn = $.querySelector('.top_btn')
 
