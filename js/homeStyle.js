@@ -1,5 +1,30 @@
 let $ = document
 
+// top_btn
+let topBtn = $.querySelector('.top_btn')
+
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY >= 700) {
+        topBtn.style.display = 'block'
+
+    } else {
+        topBtn.style.display = 'none'
+    }
+})
+
+const scrollWindow = function () {
+    if (window.scrollY != 0) {
+        setTimeout(function () {
+            window.scrollTo(0, window.scrollY - 50);
+            scrollWindow();
+        }, 10);
+    }
+};
+
+topBtn.addEventListener("click", scrollWindow);
+
+
 // header
 let backBtn = $.querySelector('.back_btn')
 let sidebar = $.querySelector('.sidebar')
@@ -10,30 +35,72 @@ let sidebarOpen = $.querySelector('.sidebar_open')
 
 backBtn.addEventListener('click', () => {
     sidebar.classList.remove('open')
-    console.log(sidebar);
 })
 sidebarOpen.addEventListener('click', () => {
     sidebar.classList.remove('open')
-    console.log(sidebar);
 })
 
 openSidebar.addEventListener('click', () => {
     sidebar.classList.add('open')
-    console.log(sidebar);
 })
 
-console.log(sidebarListHov);
 
 sidebarListHov.forEach(item => {
-    item.addEventListener('mouseover' , () => {
+    item.addEventListener('mouseover', () => {
         sidebarMenu.classList.add('sidebar_unset')
     })
 })
 sidebarListHov.forEach(item => {
-    item.addEventListener('mouseout' , () => {
+    item.addEventListener('mouseout', () => {
         sidebarMenu.classList.remove('sidebar_unset')
     })
 })
+
+//slider
+let sliderArray = [
+    { id: 1, subtitile: 'Every Time', title: 'Mittnalier', url: '../images/9.jpg' },
+    { id: 2, subtitile: 'Welcome To Fashion', title: 'Men Watch', url: '../images/10.jpg' },
+]
+
+let numberOfItem = 1
+
+let slider = $.querySelector('.slider')
+let arrowLeft = $.querySelector('.arrow_left')
+let arrowRight = $.querySelector('.arrow_right')
+let sliderContents = $.querySelector('.slider_contents')
+
+
+
+function sliderHandler() {
+    sliderContents.innerHTML = ''
+
+    if (numberOfItem === 1) {
+        sliderContents.insertAdjacentHTML('afterbegin',
+            `
+        <h4 class="slider_subtitile">${sliderArray[1].subtitile}</h4>
+        <h1 class="slider_title">${sliderArray[1].title}</h1>
+        <a href="#" class="slider_btn">Shop now</a>
+        `
+        )
+        slider.classList.replace('slider_bgi1', 'slider_bgi2')
+        numberOfItem = 2
+    } else {
+
+        sliderContents.insertAdjacentHTML('afterbegin',
+            ` 
+        <h4 class="slider_subtitile">${sliderArray[0].subtitile}</h4>
+        <h1 class="slider_title">${sliderArray[0].title}</h1>
+        <a href="#" class="slider_btn">Shop now</a>
+        `
+        )
+        slider.classList.replace('slider_bgi2', 'slider_bgi1')
+        numberOfItem = 1
+    }
+}
+
+arrowLeft.addEventListener('click', sliderHandler)
+arrowRight.addEventListener('click', sliderHandler)
+
 
 // trending part1
 
