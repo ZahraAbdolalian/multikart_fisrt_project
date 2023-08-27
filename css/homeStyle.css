@@ -1,3 +1,7 @@
+:root{
+    --main-color: #ff4c3b
+}
+
 html {
     box-sizing: border-box;
 }
@@ -748,9 +752,9 @@ a {
     font-size: 14px;
     text-transform: uppercase;
     color: #fff;
-    background-image: linear-gradient(30deg, rgb(228, 96, 74) 50%,
+    background-image: linear-gradient(30deg, var(--main-color) 50%,
             transparent 50%) !important;
-    border: 2px solid rgb(228, 96, 74);
+    border: 2px solid var(--main-color);
     padding: 13px 29px;
     background-size: 850px;
     background-repeat: no-repeat;
@@ -871,7 +875,7 @@ a {
 }
 
 .offer_amount {
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
 }
 
 .offer_timer_box {
@@ -958,7 +962,7 @@ a {
 }
 
 .category_item_link:hover {
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
     transition: 0.5s ease;
 }
 
@@ -970,19 +974,19 @@ a {
     padding: 13px 29px;
     margin-top: 20px;
     font-size: 14px;
-    border: 2px solid rgb(228, 96, 74);
+    border: 2px solid var(--main-color);
     transition: 0.3s ease-in-out;
 }
 
 .category_link:hover {
 
     color: #fff;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
     transition: 0.3s ease-in-out;
 }
 
 .category_product_box:hover {
-    border-color: rgb(228, 96, 74);
+    border-color: var(--main-color);
     transition: all 0.5s ease;
 }
 
@@ -1029,7 +1033,7 @@ a {
     position: relative;
     width: 180px;
     height: 1px;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
     bottom: 0;
     top: 0;
     margin: 0 auto;
@@ -1044,7 +1048,7 @@ a {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
     top: -4px;
 }
 
@@ -1077,7 +1081,7 @@ a {
 }
 
 .selected {
-    color: rgb(228, 96, 74) !important;
+    color: var(--main-color) !important;
 }
 
 .trending_list_link {
@@ -1091,7 +1095,7 @@ a {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
     color: #fff;
     border-radius: 100%;
     padding: 11px 4px;
@@ -1163,7 +1167,7 @@ a {
 }
 
 .shopping:hover {
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
     transition: all 0.5s ease;
 }
 
@@ -1532,7 +1536,7 @@ a {
 .recent_h4 {
     line-height: 1;
     font-weight: 400;
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
     margin-top: 25px;
 }
 
@@ -1546,14 +1550,14 @@ a {
 }
 
 .recent_text:hover {
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
     transition: all 0.5s ease;
 }
 
 .recent_line {
     width: 75px;
     height: 3px;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
     margin: 0 auto;
     margin-top: 13px;
     margin-bottom: 16px;
@@ -1586,7 +1590,7 @@ a {
     opacity: 0;
     transition: all 0.3s steps(4);
     z-index: 1;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
 }
 
 .recent_img_box span::after,
@@ -1600,7 +1604,7 @@ a {
     opacity: 0;
     transition: all 0.3s steps(4);
     z-index: 1;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
 }
 
 
@@ -1701,7 +1705,7 @@ a {
 }
 
 .service_h4:hover {
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
     transition: all 0.3s ease;
 }
 

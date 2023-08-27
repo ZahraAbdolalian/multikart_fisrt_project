@@ -1,3 +1,7 @@
+:root{
+    --main-color: #ff4c3b
+}
+
 html {
     box-sizing: border-box;
 }
@@ -198,3 +202,151 @@ ul {
     margin-top: 25px;
 }
 
+.billing_box_right{
+    padding-left: 12px;
+}
+
+.order_container{
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+    position: relative;
+    padding: 40px;
+}
+
+.odrer_title,
+.product_detail{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ededed;
+}
+
+.odrer_title h2 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    color: #444444;
+}
+
+.last_child{
+    width: 35%;
+}
+
+.product_name{
+    font-size: 15px;
+    line-height: 20px;
+    color: #444444;
+}
+
+.product_price{
+    font-size: 18px;
+    color: #232323;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.subtotal_box{
+    text-transform: capitalize;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 30px;
+}
+
+.subtotal,
+.shipping{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.total_title{
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.total_price{
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--main-color);
+}
+
+.shoping_option{
+    width: 36.6%;
+}
+
+.shoping_option div{
+    display: block;
+    padding-left: 10px;
+    margin-bottom: 8px;
+    color: #6f6f6f;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.shoping_option div label,
+.payment_radio div label{
+    padding-left: 10px;
+}
+
+.total_box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.total {
+    color: #333333;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.payment_radio div {
+    margin-bottom: 15px;
+    color: #6f6f6f;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.paypal_box{
+    cursor: pointer;
+}
+.payment_img{
+    margin-top: 5px;
+}
+
+.payment_btn_box{
+    text-align: right;
+}
+
+.payment_btn{
+    padding: 13px 29px;
+    background-image: linear-gradient(30deg, var(--main-color) 50%, transparent 50%);
+    background-size: 850px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    transition: background 300ms ease-in-out;
+    color: #ffffff;
+    letter-spacing: 0.7px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-family: 'Lato', sans-serif;
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+}
+
+.able:hover {
+    background-position: 100%;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.disable{
+    opacity: 0.6;
+    cursor: auto;
+}

@@ -1,3 +1,7 @@
+:root{
+    --main-color: #ff4c3b
+}
+
 .dark{
     background-color: #2b2b2b;
     color: #cfd4da;
@@ -51,16 +55,16 @@
     right: 0;
     left: 0;
     height: 4px;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
     margin-bottom: 5px;
 }
 
 .circle_loader{
     position: absolute;
     border: 2px solid #fff;
-    border-top: 2px solid rgb(228, 96, 74);
-    border-bottom: 2px solid rgb(228, 96, 74);
-    border-left: 2px solid rgb(228, 96, 74);
+    border-top: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    border-left: 2px solid var(--main-color);
     border-radius: 100%;
     width: 14px;
     height: 14px;
@@ -79,7 +83,7 @@
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
     color: #fff;
     position: fixed;
     bottom: 50px;
@@ -133,7 +137,7 @@
 
 .compare:hover,
 .wishlist:hover {
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
 }
 
 .header_top_right_contents {
@@ -167,7 +171,7 @@
 
 .login_hover:hover a,
 .Logout_hover:hover a {
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
     transition: 0.5s ease;
 }
 
@@ -179,7 +183,7 @@
 }
 
 .header_list_item:hover .my_account_link i {
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
 }
 
 .call::before {
@@ -187,7 +191,7 @@
     font: var(--fa-font-solid);
     padding-right: 10px;
     font-size: 12px;
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
 }
 
 .my_account::after {
@@ -400,7 +404,7 @@
 }
 
 .new {
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
     color: #fff;
     position: absolute;
     top: 72px;
@@ -414,7 +418,7 @@
     position: absolute;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid rgb(228, 96, 74);
+    border-top: 5px solid var(--main-color);
     top: 15px;
     left: 5px;
 }
@@ -498,7 +502,7 @@
     content: "";
     position: absolute;
     bottom: 0;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
     transition: 0.5s ease;
     height: 2px;
     width: 0;
@@ -532,7 +536,7 @@
 }
 
 .new_elem {
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
@@ -617,7 +621,7 @@ a {
 
 .counter {
     color: #fff;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
     width: 20px;
     height: 20px;
     font-size: 12px;
@@ -696,9 +700,9 @@ a {
     font-size: 14px;
     text-transform: uppercase;
     color: #fff;
-    background-image: linear-gradient(30deg, rgb(228, 96, 74) 50%,
+    background-image: linear-gradient(30deg, var(--main-color) 50%,
             transparent 50%) !important;
-    border: 2px solid rgb(228, 96, 74);
+    border: 2px solid var(--main-color);
     padding: 13px 29px;
     background-size: 850px;
     background-repeat: no-repeat;
@@ -764,7 +768,7 @@ a {
 }
 
 .footer_bottom_i:hover {
-    color: rgb(228, 96, 74);
+    color: var(--main-color);
     transition: 0.5s ease;
 }
 
@@ -811,7 +815,7 @@ a {
     content: "";
     position: absolute;
     bottom: 0;
-    background-color: rgb(228, 96, 74);
+    background-color: var(--main-color);
     transition: 0.5s ease;
     height: 2px;
     width: 0;
