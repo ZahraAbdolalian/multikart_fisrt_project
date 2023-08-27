@@ -43,7 +43,39 @@
     box-shadow: none;
 }
 
+.dark .submenu{
+    background-color: #2b2b2b;
+    box-shadow: none;
+}
 
+.dark .item_hover{
+    background-color: #232323;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+.dark .sidebar_menu{
+    background-color: #232323;
+    transition: all 0.3s ease;
+}
+
+.dark .sidebar_submenu {
+    background-color: #232323;
+    box-shadow: none;
+}
+
+.dark .sidebar_submenu h5,
+.dark .sidebar_submenu a{
+    color: #cfd4da;
+}
+.dark .cart_message{
+    color: #cfd4da;
+}
+.dark p {
+    color: #cfd4da;
+}
+.dark .footer_bootom_item_left{
+    color: #cfd4da;
+}
 /* loader */
 .loader{
     display: block;
