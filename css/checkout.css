@@ -14,17 +14,18 @@ body {
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
 }
+
 ul {
     list-style-type: none;
 }
 
 /* title */
-.title{
+.title {
     background-color: #f8f8f8;
     padding: 30px 0;
 }
 
-.title_box{
+.title_box {
     max-width: 1400px;
     padding: 0 12px;
     margin: 0 auto;
@@ -33,7 +34,7 @@ ul {
     justify-content: space-between;
 }
 
-.title_h2{
+.title_h2 {
     color: #222222;
     font-weight: 700;
     text-transform: uppercase;
@@ -41,8 +42,8 @@ ul {
     letter-spacing: 0.32px;
 }
 
-.location a ,
-.location{
+.location a,
+.location {
     text-transform: uppercase;
     color: #555555;
     font-weight: 600;
@@ -50,7 +51,150 @@ ul {
     line-height: 21px;
 }
 
-.location a + span {
+.location a+span {
     margin-right: 5px;
     margin-left: 5px;
 }
+
+/* billing_details */
+
+.billing_details {
+    padding-bottom: 70px;
+    padding-top: 70px;
+}
+
+.billing_container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.billing_box {
+    display: flex;
+}
+
+.billing_box_left ,
+.billing_box_right {
+    width: 50%;
+}
+
+.billing_title {
+    margin-bottom: 25px;
+}
+
+.billing_title h3 {
+    margin-bottom: 8px;
+    color: #444444;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.72px;
+}
+
+.user_infos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user_info_box {
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 25px;
+    width: 50%;
+}
+
+.user_info_box span {
+    display: block;
+    margin-bottom: 10px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 24px;
+}
+
+.user_info_box input,
+.user_country {
+    width: 100%;
+    outline: none;
+    border: 1px solid #dddddd;
+    padding: 0px 22px;
+    height: 45px;
+}
+
+.warning_text {
+    color: rgb(220, 53, 69);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.larger_box {
+    width: 100%;
+}
+
+.user_country {
+    cursor: pointer;
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+.stripe_js,
+.paypal {
+    text-transform: uppercase;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+}
+
+.stripe_js_container ,
+.paypal_container {
+    border: 1px solid #dddddd;
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+
+.stripe_js_container h5,
+.paypal_container h5{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 24px;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.stripe_content h5,
+.paypal_content h5{
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    color: #4f4f4f;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.stripe_table,
+.paypal_table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stripe_table td,
+.paypal_table td{
+    border-bottom: 1px solid #eeeeee;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    color: #9a9a9a;
+    font-size: 14px;
+}
+
+.stripe_table td:last-child,
+.paypal_table td:last-child{
+    text-align: right;
+}
+
+.paypal{
+    margin-top: 25px;
+}
+
