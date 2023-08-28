@@ -46,6 +46,10 @@ body.dark{
 .dark .user_info_box span{
     color: #cfd4da;
 }
+.dark .select_lable {
+    color: #cfd4da;
+}
+
 .dark .user_info_box input{
     background-color: #2b2b2b;
     transition: all 0.3s ease;
@@ -155,7 +159,8 @@ body.dark{
     flex-wrap: wrap;
 }
 
-.user_info_box {
+.user_info_box,
+.user_info_selector{
     position: relative;
     padding-left: 12px;
     padding-right: 12px;
@@ -163,7 +168,8 @@ body.dark{
     width: 50%;
 }
 
-.user_info_box span {
+.user_info_box span ,
+.select_lable{
     display: block;
     margin-bottom: 10px;
     color: #333333;
@@ -182,10 +188,16 @@ body.dark{
     height: 45px;
 }
 
-.warning_text {
+.warning_text,
+.warning_firstname {
     color: rgb(220, 53, 69);
     font-size: 14px;
     line-height: 21px;
+    opacity: 0;
+}
+
+.show{
+    opacity: 1;
 }
 
 .larger_box {
@@ -343,7 +355,10 @@ body.dark{
 .shoping_option div label,
 .payment_radio div label{
     padding-left: 10px;
+    cursor: pointer;
+
 }
+
 
 .total_box{
     display: flex;
@@ -377,6 +392,10 @@ body.dark{
     text-align: right;
 }
 
+.hidden_btn{
+    display: none;
+}
+
 .payment_btn{
     padding: 13px 29px;
     background-image: linear-gradient(30deg, var(--main-color) 50%, transparent 50%);
@@ -405,3 +424,4 @@ body.dark{
     opacity: 0.6;
     cursor: auto;
 }
+

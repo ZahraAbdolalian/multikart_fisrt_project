@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/header&footer.css">
 </head>
 
-<body class="dark">
+<body class="">
     <div class="loader">
         <div class="line_loader"></div>
         <div class="circle_loader"></div>
@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="header_bottom">
+            <div class="header_bottom sticky">
                 <div class="header_bottom_left">
 
                     <div class="sidebar">
@@ -712,54 +712,54 @@
                             </div>
                             <div class="user_infos">
                                 <div class="user_info_box">
-                                    <span>First Name</span>
-                                    <input type="text" name="firstname">
-                                    <div class="warning_text"></div>
+                                    <span class="input_lable">First Name</span>
+                                    <input type="text" name="firstname" class="user_input firstname_input">
+                                    <div class="warning_text firstname">First Name is required.</div>
                                 </div>
                                 <div class="user_info_box">
-                                    <span>Last Name</span>
-                                    <input type="text" name="lastname">
-                                    <div class="warning_text"></div>
+                                    <span class="input_lable">Last Name</span>
+                                    <input type="text" name="lastname" class="user_input lastname_input">
+                                    <div class="warning_text lastname">Last Name is required.</div>
                                 </div>
                                 <div class="user_info_box">
-                                    <span>Phone</span>
-                                    <input type="text" name="phone">
-                                    <div class="warning_text"></div>
+                                    <span class="input_lable">Phone</span>
+                                    <input type="text" name="phone" class="user_input phone_input">
+                                    <div class="warning_text phone">Phone is required.</div>
                                 </div>
                                 <div class="user_info_box">
-                                    <span>Email Address</span>
-                                    <input type="text" name="emailaddress">
-                                    <div class="warning_text"></div>
+                                    <span class="input_lable">Email Address</span>
+                                    <input type="email" name="emailaddress" class="user_input emailaddress_input">
+                                    <div class="warning_text emailaddress">Email Address is required.</div>
                                 </div> 
-                                <div class="user_info_box larger_box">
-                                    <span>Country</span>
+                                <div class="user_info_selector larger_box">
+                                    <div class="select_lable">Country</div>
                                     <select name="country" class="user_country">
-                                        <option value="">Select Country</option>
-                                        <option value="">India</option>
-                                        <option value="">USA</option>
-                                        <option value="">Australia</option>
+                                        <option value="Select Country">Select Country</option>
+                                        <option value="India">India</option>
+                                        <option value="USA">USA</option>
+                                        <option value="Australia">Australia</option>
                                     </select>
                                     <div class="warning_text"></div>
                                 </div>
                                 <div class="user_info_box larger_box">
-                                    <span>Address</span>
-                                    <input type="text" name="address">
-                                    <div class="warning_text"></div>
+                                    <span class="input_lable">Address</span>
+                                    <input type="text" name="address" class="user_input address_input">
+                                    <div class="warning_text address">Address is required.</div>
                                 </div>
                                 <div class="user_info_box larger_box">
-                                    <span>Town/City</span>
-                                    <input type="text" name="Town/City">
-                                    <div class="warning_text"></div>
+                                    <span class="input_lable">Town/City</span>
+                                    <input type="text" name="town_city" class="user_input city_input">
+                                    <div class="warning_text town_city">Town/City is required.</div>
                                 </div>
                                 <div class="user_info_box larger_box">
-                                    <span>State</span>
-                                    <input type="text" name="state">
-                                    <div class="warning_text"></div>
+                                    <span class="input_lable">State</span>
+                                    <input type="text" name="state" class="user_input state_input">
+                                    <div class="warning_text state">State is required.</div>
                                 </div>
                                 <div class="user_info_box larger_box">
-                                    <span>Postal Code</span>
-                                    <input type="text" name="postalCode">
-                                    <div class="warning_text"></div>
+                                    <span class="input_lable">Postal Code</span>
+                                    <input type="text" name="postalCode" class="user_input code_input">
+                                    <div class="warning_text postalCode">Postal Code is required.</div>
                                 </div>
                             </div>
 
@@ -829,12 +829,12 @@
                                             <div class="shoping_option">
 
                                                 <div>
-                                                    <input type="radio" name="shipping" id="shipping_option">
+                                                    <input type="radio" name="radio1" id="shipping_option">
                                                     <label for="shipping_option">Shipping</label>
                                                 </div>
                                                 
                                                 <div>
-                                                    <input type="radio" name="local_pickup" id="local_pickup_option">
+                                                    <input type="radio" name="radio1" id="local_pickup_option">
                                                     <label for="local_pickup_option">Local Pickup</label>
                                                 </div>
                                             </div>
@@ -848,11 +848,11 @@
                                 <div class="payment">
                                     <div class="payment_radio">
                                         <div>
-                                            <input type="radio" name="stripe" id="stripe_option">
+                                            <input type="radio" name="radio2" id="stripe_option">
                                             <label for="stripe_option">Stripe</label>
                                         </div>
                                         <div class="paypal_box">
-                                            <input type="radio" name="paypal" id="paypal_option">
+                                            <input type="radio" name="radio2" id="paypal_option">
                                             <label for="paypal_option">PayPal</label>
 
                                             <div class="payment_img">

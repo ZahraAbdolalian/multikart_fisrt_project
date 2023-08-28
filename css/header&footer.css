@@ -14,6 +14,10 @@
     background-color: #232323;
     transition: all 0.3s ease;
 }
+.dark .header_bottom{
+    background-color: #2b2b2b;
+}
+
 .dark a{
     color: #cfd4da;
 }
@@ -56,6 +60,10 @@
 .dark .sidebar_menu{
     background-color: #232323;
     transition: all 0.3s ease;
+}
+
+.dark .back_btn{
+    color: #f1f3f5;
 }
 
 .dark .sidebar_submenu {
@@ -157,8 +165,12 @@
 }
 
 .header_list_item {
-    padding: 17px 15px;
+    padding: 17px 13px;
     position: relative;
+}
+
+.header_list_item:last-child{
+    padding-right: 0;
 }
 
 .header_top_link {
@@ -230,7 +242,7 @@
     content: "\f107";
     font: var(--fa-font-solid);
     font-size: 10px;
-    margin-left: 5px;
+    margin-left: 9px;
 }
 
 .header_top_link i {
@@ -302,7 +314,7 @@
     opacity: 0;
 }
 
-.sidebar_list li:hover .sidebar_submenu_list {
+.sidebar_list_hov:hover .sidebar_submenu_list {
     visibility: visible;
     opacity: 1;
 }
@@ -406,10 +418,23 @@
 /* header bottom*/
 
 .header_bottom {
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
-    padding: 0px 40px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+}
 
+.sticky{
+    width: 100%;
+    z-index: 10000;
+    transition: all 300ms ease;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 0px 8px #ddd;
 }
 
 .header_bottom_left {
@@ -439,7 +464,7 @@
     background-color: var(--main-color);
     color: #fff;
     position: absolute;
-    top: 72px;
+    top: 20px;
     font-size: 9px;
     line-height: 11px;
     padding: 2px 7px;
@@ -468,7 +493,7 @@
 }
 
 .navbar_item_link {
-    padding: 42px 38px 42px 0;
+    padding: 42px 45px 42px 0;
     position: relative;
 }
 
@@ -483,14 +508,14 @@
 
 .arrow {
     position: absolute;
-    top: 75px;
+    top: 73px;
     left: auto;
-    width: 34px;
+    width: 46px;
     height: 34px;
     margin-top: -26px;
     margin-left: -10px;
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .arrow::before {
@@ -630,7 +655,7 @@
 .setting {
     right: 40px;
     left: unset;
-    top: 150px;
+    top: 100px;
     z-index: 9;
 }
 
@@ -659,8 +684,8 @@ a {
     font-size: 12px;
     font-weight: 600;
     position: absolute;
-    top: 74px;
-    right: 31px;
+    top: 20%;
+    right: 3px;
     border-radius: 100%;
     text-align: center;
     line-height: 20px;
