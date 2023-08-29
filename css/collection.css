@@ -598,11 +598,12 @@ div.range-slider > input[type="range"]::-ms-tooltip {
     width: 10%;
     padding: 20px;
     cursor: pointer;
-    vertical-align: middle;
+    align-self: center;
 }
 
 .collection_view svg {
     margin-right: 5px;
+    padding-top: 0.9px;
 }
 
 .collection_grid_view{
@@ -651,9 +652,21 @@ div.range-slider > input[type="range"]::-ms-tooltip {
 .product_item {
     padding-left: 12px;
     padding-right: 12px;
-    width: 25%;
     margin-top: 50px;
     position: relative;
+}
+
+.row2_product{
+    width: 50%;
+}
+.row3_product{
+    width: 33.33333333%;
+}
+.row4_product{
+    width: 25%;
+}
+.row5_product{
+    width: 16.66666667%;
 }
 
 .new_sapn{
@@ -745,10 +758,28 @@ div.range-slider > input[type="range"]::-ms-tooltip {
     }
 }
 
+.product_box_list:hover .product_icons {
+    opacity: 1;
+    transition: all 0.5s ease;
+    right: 0px;
+    animation: icons;
+
+    .heart {
+        animation: icons 500ms ease-in-out;
+    }
+
+    .magnifying {
+        animation: icons 700ms ease-in-out;
+    }
+
+    .refresh {
+        animation: icons 1000ms ease-in-out;
+    }
+}
 
 @keyframes icons {
     from {
-        right: -50px;
+        right: -20px;
     }
 
     to {
@@ -884,10 +915,6 @@ div.range-slider > input[type="range"]::-ms-tooltip {
     color: var(--main-color) !important;
 }
 
-.product_page_handler ul li.click_item {
-    background-color: #dee2e6;
-}
-
 .product_footer_text{
     padding-left: 12px;
     padding-right: 12px;
@@ -912,3 +939,67 @@ div.range-slider > input[type="range"]::-ms-tooltip {
     line-height: 24px;
     letter-spacing: 0.7px;
 }
+
+/* product_box_list */
+
+.product_view_list{
+    position: relative;
+}
+
+.product_box_list{
+    margin-top: 50px;
+    display: flex;
+}
+
+.product_img_box_list{
+    width: 25%;
+    position: relative;
+}
+
+.product_img_box_list img{
+    max-width: 100%;
+    height: auto;
+}
+.product_detail_list{
+    padding-left: 15px;
+    width: 75%;
+    text-align: left;
+    align-self: center;
+}
+
+.product_name_list{
+    color: #777777;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-bottom: 3px;
+    padding-bottom: 5px;
+}
+
+.product_name_text{
+    color: #777777;
+    font-size: 14px;
+    letter-spacing: 0.42px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.price_list{
+    display: flex;
+    flex-direction: column;
+}
+
+.price_list del {
+    margin-top: 5px;
+}
+
+.hidden_icons{
+    display: none;
+}
+
+.disable_prev{
+    pointer-events: none;
+    background-color: #dee2e6;
+}
+

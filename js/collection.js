@@ -121,10 +121,9 @@ let inputLeft = $.querySelector('.range-slider-input-left')
 let inputRight = $.querySelector('.range-slider-input-right')
 let leftText = $.querySelector('.left_text')
 let rightText = $.querySelector('.right_text')
-console.log(sliderNumber);
 
 inputLeft.addEventListener('mousemove', () => {
-    console.log(sliderNumber[0].innerHTML);
+
     if (sliderNumber[0].innerHTML > 79) {
         leftText.classList.add('show_text')
     } else {
@@ -132,7 +131,7 @@ inputLeft.addEventListener('mousemove', () => {
     }
 })
 inputRight.addEventListener('mousemove', () => {
-    console.log(sliderNumber[0].innerHTML);
+
     if (sliderNumber[1].innerHTML < 787) {
         rightText.classList.add('show_text')
     } else {
@@ -221,24 +220,29 @@ let productArray = [
     { id: 17, src: 'images/trending4.jpg', name: 'Watch 17', discountedPrice: '$80.00', price: '$160.00', colors: 'bisque palegoldenrod silver', onsale: false },
 ]
 
-let productList = $.querySelector('.product_list')
+let productGrid = $.querySelector('.product_list')
+let productList = $.querySelector('.product_view_list')
+let countTextUp = $.querySelector('.count_text_up')
+let countTextBottom = $.querySelector('.count_text_bottom')
 
 let currentpage = 1
 let productCount = 16
 
-
-function displayPtoduct() {
+function displayPtoductGrid(currentRow) {
+    productGrid.innerHTML = ''
     productList.innerHTML = ''
 
     let endIndex = productCount * currentpage
     let startIndex = endIndex - productCount
 
+    countTextUp.innerHTML = `Showing Products ${(startIndex > 16) && startIndex - 15 || 1}-${(endIndex > productArray.length) && 1 || endIndex} of ${productArray.length} Result`
+    countTextBottom.innerHTML = `Showing Products ${(startIndex > 16) && startIndex - 15 || 1}-${(endIndex > productArray.length) && 1 || endIndex} of ${productArray.length} Result`
+
     let paginatedProduct = productArray.slice(startIndex, endIndex)
-    console.log(paginatedProduct);
 
     paginatedProduct.forEach(product => {
-        productList.insertAdjacentHTML('beforeend', `
-        <div class="product_item">
+        productGrid.insertAdjacentHTML('beforeend', `
+    <div class="product_item ${currentRow}">
         <div class="product_item_box">
             <div class="product_img_box">
                 <span class="new_sapn">
@@ -291,16 +295,16 @@ function displayPtoduct() {
     </div>
     `)
         let productColorList = $.querySelectorAll('.product_color_list')
-        colorsArray = product.colors.split(' ')
-        productImgBox = $.querySelectorAll('.product_img_box')
+        let colorsArray = product.colors.split(' ')
+        let productImgBox = $.querySelectorAll('.product_img_box')
         colorsArray.forEach(color => {
-            productColorList[product.id - 1].insertAdjacentHTML('beforeend',
+            productColorList[product.id - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('beforeend',
                 `<li class="${color} product_color"></li>`
             )
         })
 
         if (product.onsale) {
-            productImgBox[product.id - 1].insertAdjacentHTML('afterbegin',
+            productImgBox[product.id - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('afterbegin',
                 `<span class="product_on_sale">
             on sale
         </span>`
@@ -309,4 +313,213 @@ function displayPtoduct() {
     })
 }
 
-displayPtoduct()
+function displayProductList() {
+    productGrid.innerHTML = ''
+    productList.innerHTML = ''
+
+    let endIndex = productCount * currentpage
+    let startIndex = endIndex - productCount
+
+    countTextUp.innerHTML = `Showing Products ${(startIndex > 16) && startIndex - 15 || 1}-${(endIndex > productArray.length) && 1 || endIndex} of ${productArray.length} Result`
+    countTextBottom.innerHTML = `Showing Products ${(startIndex > 16) && startIndex - 15 || 1}-${(endIndex > productArray.length) && 1 || endIndex} of ${productArray.length} Result`
+
+
+    let paginatedProduct = productArray.slice(startIndex, endIndex)
+
+    paginatedProduct.forEach(product => {
+        productList.insertAdjacentHTML('beforeend', `
+        <div class="product_box_list">
+        <div class="product_img_box_list">
+            <span class="new_sapn">
+                new
+            </span>
+            <a href="">
+                <img class="product_img" src="${product.src}" alt="">
+            </a>
+            
+
+            <div class="product_icons">
+                <a class="product_icons_link" href="#">
+                     <i
+                        class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
+                </a>
+
+                <a class="product_icons_link" href="#">
+                     <i class="fa fa-heart shopping heart"></i>
+                </a>
+
+                <a class="product_icons_link" href="#">
+                    <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
+                </a>
+
+                <a class="product_icons_link" href="#">
+                    <i class="fa fa-refresh shopping refresh"></i>
+                </a>
+            </div>
+        </div>
+        <div class="product_detail_list">
+            <div class="stars">
+                <div class="star">★</div>
+                <div class="star">★</div>
+                <div class="star">★</div>
+                <div class="star">★</div>
+                <div class="star">★</div>
+            </div>
+            <a href="">
+                 <h6 class="product_name_list">${product.name}</h6>
+            </a>
+            <p class="product_name_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+             <h4 class="product_discounted_price price_list"> ${product.discountedPrice}
+                 <del class="product_price">${product.price}</del>
+             </h4>
+            <ul class="product_color_list">
+                
+            </ul>
+
+        </div>
+    </div>
+    `)
+        let productColorList = $.querySelectorAll('.product_color_list')
+        colorsArray = product.colors.split(' ')
+        let productImgBox = $.querySelectorAll('.product_img_box_list')
+        colorsArray.forEach(color => {
+            productColorList[product.id - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('beforeend',
+                `<li class="${color} product_color"></li>`
+            )
+        })
+
+        if (product.onsale) {
+            productImgBox[product.id - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('afterbegin',
+                `<span class="product_on_sale">
+            on sale
+        </span>`
+            )
+        }
+    })
+}
+
+let currentRow = 'row4_product'
+let isGrid = true
+let svgView = $.querySelector('.svg_view')
+let collectionIcons = $.querySelector('.collection_grid_view')
+let listView = $.querySelector('.i_view')
+
+displayPtoductGrid(currentRow)
+
+svgView.addEventListener('click', () => {
+    displayPtoductGrid(currentRow)
+    isGrid = true
+    collectionIcons.classList.remove('hidden_icons')
+})
+
+
+listView.addEventListener('click', () => {
+    displayProductList()
+    isGrid = false
+    collectionIcons.classList.add('hidden_icons')
+})
+
+let prevBtn = $.querySelector('.prev')
+let nextBtn = $.querySelector('.next')
+let numButtons = $.querySelectorAll('.num_button')
+let pageCount = Math.ceil(productArray.length / productCount)
+
+prevBtn.addEventListener('click', () => {
+
+    if (currentpage > 1) {
+        currentpage--
+        if (isGrid) {
+            displayPtoductGrid(currentRow)
+        } else {
+            displayProductList()
+        }
+        if (currentpage == 1) {
+            prevBtn.classList.add('disable_prev')
+            nextBtn.classList.remove('disable_prev')
+        }
+
+        numButtons.forEach(numBtn => {
+            if (numBtn.innerHTML == currentpage) {
+                numBtn.parentElement.classList.add('active')
+            }
+            if (numBtn.innerHTML == currentpage + 1) {
+                numBtn.parentElement.classList.remove('active')
+            }
+        })
+    }
+})
+
+nextBtn.addEventListener('click', () => {
+    if (currentpage < pageCount) {
+        currentpage++
+
+        if (isGrid) {
+            displayPtoductGrid(currentRow)
+        } else {
+            displayProductList()
+        }
+
+        if (currentpage == pageCount) {
+            nextBtn.classList.add('disable_prev')
+            prevBtn.classList.remove('disable_prev')
+        }
+
+        numButtons.forEach(numBtn => {
+            if (numBtn.innerHTML == currentpage) {
+                numBtn.parentElement.classList.add('active')
+            }
+            if (numBtn.innerHTML == currentpage - 1) {
+                numBtn.parentElement.classList.remove('active')
+            }
+        })
+    }
+})
+
+
+//layaout view
+
+let row2 = $.querySelector('.row2')
+let row3 = $.querySelector('.row3')
+let row4 = $.querySelector('.row4')
+let row5 = $.querySelector('.row5')
+let allProductItem = $.querySelectorAll('.product_item')
+
+row2.addEventListener('click', () => {
+    allProductItem = $.querySelectorAll('.product_item')
+    console.log(allProductItem);
+    allProductItem.forEach(product => {
+        product.classList.remove(currentRow)
+        product.classList.add('row2_product')
+    })
+    currentRow = 'row2_product'
+    console.log('clic');
+})
+
+row3.addEventListener('click', () => {
+    allProductItem = $.querySelectorAll('.product_item')
+    allProductItem.forEach(product => {
+        product.classList.remove(currentRow)
+        product.classList.add('row3_product')
+    })
+    currentRow = 'row3_product'
+})
+
+row4.addEventListener('click', () => {
+    allProductItem = $.querySelectorAll('.product_item')
+    allProductItem.forEach(product => {
+        product.classList.remove(currentRow)
+        product.classList.add('row4_product')
+    })
+    currentRow = 'row4_product'
+})
+
+row5.addEventListener('click', () => {
+    allProductItem = $.querySelectorAll('.product_item')
+    allProductItem.forEach(product => {
+        product.classList.remove(currentRow)
+        product.classList.add('row5_product')
+    })
+    currentRow = 'row5_product'
+})
+
+
