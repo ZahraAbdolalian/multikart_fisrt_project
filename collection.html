@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiKart Ecommerce Angular 15 | Angular Ecommerce Template</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=M+PLUS+Rounded+1c&family=Roboto:wght@300&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7fa118d1b7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/collection.css">
+    <link rel="stylesheet" href="css/header&footer.css">
+</head>
+
+<body>
+
+    <div class="loader">
+        <div class="line_loader"></div>
+        <div class="circle_loader"></div>
+    </div>
+
+    <div class="top_btn">
+        <i class="fa fa-angle-double-up"></i>
+    </div>
+    <div class="container">
+        <header class="header">
+            <div class="header_top_container">
+                <div class="header_top">
+                    <div class="header_top_left">
+                        <ul class="header_top_left_contents">
+                            <li class="welcome">Welcome to Our store Multikart</li>
+                            <li class="call">Call Us: 123 - 456 - 7890</li>
+                        </ul>
+                    </div>
+                    <div class="header_top_right">
+                        <ul class="header_top_right_contents">
+                            <li class="header_list_item">
+                                <a class="header_top_link compare" href="#"><i class="fa fa-random"></i>Compare</a>
+                            </li>
+                            <li class="header_list_item">
+                                <a class="header_top_link wishlist" href="#"><i class="fa fa-heart"></i>Wishlist</a>
+                            </li>
+                            <div class="header_dropdown">
+                                <li class="header_list_item my_account">
+                                    <a class="header_top_link my_account_link" href="#">
+                                        <i class="fa fa-user"></i>
+                                        My Account</a>
+                                    <ul class="item_hover my_account_hov">
+                                        <li class="login_hover"> <a href="#">Login</a> </li>
+                                        <li class="Logout_hover"> <a href="#">Logout</a> </li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <div class="header_bottom_left">
+                    <div class="sidebar">
+                        <i class="fa fa-bars sidebar-bar open_sidebar" aria-hidden="true"></i>
+                        <a href="#" class="sidebar_open"></a>
+                        <div class="sidebar_menu">
+                            <div class="back_btn">
+                                <i aria-hidden="true" class="fa fa-angle-left pe-2"></i>
+                                Back
+                            </div>
+                            <ul class="sidebar_list">
+                                <li class="sidebar_list_hov">
+                                    <a class="sidebar_link" href="">
+                                        clothing
+                                        <i aria-hidden="true" class="fa fa-angle-right pe-2"></i>
+                                    </a>
+                                    <ul class="sidebar_submenu_list">
+                                        <li>
+                                            <ul class="sidebar_submenu submenu_flex">
+                                                <li class="sidebar_submenu_item_clothing">
+                                                    <h5>mens fashion</h5>
+                                                    <ul>
+                                                        <li><a href="" class="list_hov_link">sports wear</a></li>
+                                                        <li><a href="" class="list_hov_link"> top </a></li>
+                                                        <li><a href="" class="list_hov_link"> bottom </a></li>
+                                                        <li><a href="" class="list_hov_link"> ethic wear </a></li>
+                                                        <li><a href="" class="list_hov_link">sports wear</a></li>
+                                                        <li><a href="" class="list_hov_link"> shirts </a></li>
+                                                        <li><a href="" class="list_hov_link"> bottom </a></li>
+                                                        <li><a href="" class="list_hov_link"> ethic wear </a></li>
+                                                        <li><a href="" class="list_hov_link">sports wear</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="sidebar_submenu_item_clothing">
+                                                    <h5>women fashion</h5>
+                                                    <ul>
+                                                        <li><a href="" class="list_hov_link"> dresses </a></li>
+                                                        <li><a href="" class="list_hov_link"> skirts </a></li>
+                                                        <li><a href="" class="list_hov_link"> westarn wear </a></li>
+                                                        <li><a href="" class="list_hov_link"> ethic wear </a></li>
+                                                        <li><a href="" class="list_hov_link">bottom</a></li>
+                                                        <li><a href="" class="list_hov_link"> ethic wear </a></li>
+                                                        <li><a href="" class="list_hov_link">sports wear</a></li>
+                                                        <li><a href="" class="list_hov_link">sports wear</a></li>
+                                                        <li><a href="" class="list_hov_link"> bottom wear </a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar_list_hov">
+                                    <a class="sidebar_link" href="">
+                                        bags
+                                        <i aria-hidden="true" class="fa fa-angle-right pe-2"></i>
+                                    </a>
+                                    <ul class="sidebar_submenu_list">
+                                        <li>
+                                            <ul class="sidebar_submenu submenu_small">
+                                                <li class="sidebar_submenu_item">
+                                                    <ul>
+                                                        <li><a href="" class="list_hov_link"> shopper bags </a></li>
+                                                        <li><a href="" class="list_hov_link"> laptop bags </a></li>
+                                                        <li><a href="" class="list_hov_link"> clutches </a></li>
+                                                        <li class="sub_submenu_hover"><a href="" class="list_hov_link">
+                                                                purses </a>
+                                                            <ul
+                                                                class="sidebar_submenu sidebar_sub_submenu submenu_small">
+                                                                <li><a href="" class="list_hov_link">purses</a></li>
+                                                                <li><a href="" class="list_hov_link">wallets</a></li>
+                                                                <li><a href="" class="list_hov_link">leathers</a></li>
+                                                                <li><a href="" class="list_hov_link">satchels</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar_list_hov">
+                                    <a class="sidebar_link" href="">
+                                        footwear
+                                        <i aria-hidden="true" class="fa fa-angle-right pe-2"></i>
+                                    </a>
+                                    <ul class="sidebar_submenu_list">
+                                        <li>
+                                            <ul class="sidebar_submenu submenu_small">
+                                                <li class="sidebar_submenu_item">
+                                                    <ul>
+                                                        <li><a href="" class="list_hov_link"> sport shoes </a></li>
+                                                        <li><a href="" class="list_hov_link"> formal shoes </a></li>
+                                                        <li><a href="" class="list_hov_link"> casual shoes </a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="sidebar_link" href="">
+                                        watches
+                                    </a>
+                                </li>
+                                <li class="sidebar_list_hov">
+                                    <a class="sidebar_link" href="">
+                                        Accessories
+                                        <i aria-hidden="true" class="fa fa-angle-right pe-2"></i>
+                                    </a>
+                                    <ul class="sidebar_submenu_list">
+                                        <li>
+                                            <ul class="sidebar_submenu submenu_small">
+                                                <li class="sidebar_submenu_item">
+                                                    <ul>
+                                                        <li><a href="" class="list_hov_link"> fashion jewellery </a>
+                                                        </li>
+                                                        <li><a href="" class="list_hov_link"> caps and hats </a></li>
+                                                        <li><a href="" class="list_hov_link"> precious jewellery </a>
+                                                        </li>
+                                                        <li class="sub_submenu_hover"><a href="" class="list_hov_link">
+                                                                more.. </a>
+                                                            <ul
+                                                                class="sidebar_submenu sidebar_sub_submenu submenu_small">
+                                                                <li><a href="" class="list_hov_link"> necklaces </a>
+                                                                </li>
+                                                                <li><a href="" class="list_hov_link"> earrings </a></li>
+                                                                <li><a href="" class="list_hov_link"> rings & wrist wear
+                                                                    </a></li>
+                                                                <li class="sub_submenu_hover sub1_hover"><a href=""
+                                                                        class="list_hov_link"> more... </a>
+                                                                    <ul class="sidebar_submenu submenu_small sub1">
+                                                                        <li><a href="" class="list_hov_link"> ties </a>
+                                                                        </li>
+                                                                        <li><a href="" class="list_hov_link"> cufflinks
+                                                                            </a></li>
+                                                                        <li><a href="" class="list_hov_link"> pockets
+                                                                                squares </a></li>
+                                                                        <li><a href="" class="list_hov_link"> helmets
+                                                                            </a></li>
+                                                                        <li><a href="" class="list_hov_link"> scarves
+                                                                            </a></li>
+                                                                        <li class="sub2_hover"><a href=""
+                                                                                class="list_hov_link"> more... </a>
+                                                                            <ul
+                                                                                class="sidebar_submenu submenu_small sub2">
+                                                                                <li><a href="" class="list_hov_link">
+                                                                                        accessory gift sets </a></li>
+                                                                                <li><a href="" class="list_hov_link">
+                                                                                        travel accessories </a></li>
+                                                                                <li><a href="" class="list_hov_link">
+                                                                                        phone cases </a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="sidebar_link" href="">
+                                        house of design
+                                    </a>
+                                </li>
+                                <li class="sidebar_list_hov">
+                                    <a class="sidebar_link" href="">
+                                        beauty & personal care
+                                        <i aria-hidden="true" class="fa fa-angle-right pe-2"></i>
+                                    </a>
+                                    <ul class="sidebar_submenu_list">
+                                        <li>
+                                            <ul class="sidebar_submenu submenu_small">
+                                                <li class="sidebar_submenu_item">
+                                                    <ul>
+                                                        <li><a href="" class="list_hov_link">makeup</a></li>
+                                                        <li><a href="" class="list_hov_link">skincare</a></li>
+                                                        <li><a href="" class="list_hov_link">premium beaty</a></li>
+                                                        <li class="sub_submenu_hover"><a href=""
+                                                                class="list_hov_link">more...</a>
+                                                            <ul
+                                                                class="sidebar_submenu sidebar_sub_submenu submenu_small">
+                                                                <li><a href="" class="list_hov_link"> fragrances </a>
+                                                                </li>
+                                                                <li><a href="" class="list_hov_link"> luxury beauty </a>
+                                                                </li>
+                                                                <li><a href="" class="list_hov_link"> hair care </a>
+                                                                </li>
+                                                                <li><a href="" class="list_hov_link"> tools & brushes
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="sidebar_link" href="">
+                                        home & decor
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="sidebar_link" href="">
+                                        kitchen
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <a href="#"><img src="images/logo-14.png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="header_bottom_right">
+                    <div class="header_bottom_right_navbar">
+                        <ul class="navbar_list">
+                            <li class="navbar_item">
+                                <a class="navbar_item_link" href="#">home
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="header_bottom_dropdwon submenu">
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Clothing
+                                            <span class="angle_right"><i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="submenu sub_submenu">
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Fashion 01</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Fashion 02</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Fashion 03</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Vegetable</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Watch</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Furniture</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Flower</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Beauty</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Electronics</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Pets</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Gym</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Tools</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Shoes</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Bags</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Marijuana</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar_item">
+                                <a class="navbar_item_link" href="#">shop
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="header_bottom_dropdwon submenu">
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Left Sidebar</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Right Sidebar</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">No Sidebar</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Infinite Scroll</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar_item">
+                                <a class="navbar_item_link" href="#">products
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="header_bottom_dropdwon submenu">
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Sidebar
+                                            <span class="angle_right"><i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="submenu sub_submenu">
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Left Sidebar</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Right Sidebar</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">No Sidebar</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Three Olumn</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Four Image</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Bundle Product</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a href="#" class="list_hov_link">Image Outside</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar_item features">
+                                <span class="new">new</span>
+                                <a href="#" class="navbar_item_link features_link">Features
+                                    <span class="arrow"></span>
+                                </a>
+                                <div class="features_container">
+                                    <div class="features_box">
+                                        <div class="features_col">
+                                            <ul class="header_bottom_dropdwon submenu" id="portfolio_item">
+                                                <h5 class="submenu_title">Portfolio</h5>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Portfolio Grid 2</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Portfolio Grid 3</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Portfolio Grid 4</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Masonry-Grid-2</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Masonry-Grid-3</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Masonry-Grid-4</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Masonry-Full-Width</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="features_col">
+                                            <ul class="header_bottom_dropdwon submenu" id="portfolio_item">
+                                                <h5 class="submenu_title">Add To Cart</h5>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Cart Right</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Cart Left</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Cart Top</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Cart Bottom</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Cart-Model-Popup</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="features_col">
+                                            <ul class="header_bottom_dropdwon submenu" id="portfolio_item">
+                                                <h5 class="submenu_title">Theme Elements</h5>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Title</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Collection Banner</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Home Slider</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Category</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Services</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="features_col">
+                                            <ul class="header_bottom_dropdwon submenu" id="portfolio_item">
+                                                <h5 class="submenu_title">Product Elements</h5>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Product Slider</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Banners</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Product Tabs</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Multi Slider</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="features_col">
+                                            <ul class="header_bottom_dropdwon submenu" id="portfolio_item">
+                                                <h5 class="submenu_title">Email Template</h5>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Order Success</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Order Success 2</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Email Template</a>
+                                                </li>
+                                                <li class="list_hov_item submenu_item_hov">
+                                                    <a href="#" class="list_hov_link">Email Template 2</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="navbar_item"><a class="navbar_item_link" href="#">pages
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="header_bottom_dropdwon submenu">
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a class="list_hov_link " href="#">Account
+                                            <span class="angle_right"><i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="submenu sub_submenu">
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Wishlist</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Cart</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Dashboard</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Login</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Register</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Contact</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Forget Password</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Profile</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Checkout</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">About us</a>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">Search</a>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">Typography
+                                            <span class="new_elem">New</span>
+                                        </a>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">Review
+                                            <span class="new_elem">New</span>
+                                        </a>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">Order Success</a>
+                                    </li>
+                                    <li class="list_hov_item submenu_item_hov">
+                                        <a class="list_hov_link" href="#">Compare
+                                            <span class="angle_right"><i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="submenu sub_submenu">
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Compare 1</a>
+                                            </li>
+                                            <li class="list_hov_item">
+                                                <a href="" class="list_hov_link">Compare 2
+                                                    <span class="new_elem">New</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">Collection</a>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">Lookbook</a>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">404</a>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">Coming Soon
+                                            <span class="new_elem">New</span>
+                                        </a>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">Faq</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar_item"><a class="navbar_item_link" href="#">blogs
+                                    <span class="arrow"></span></a>
+                                <ul class="header_bottom_dropdwon submenu">
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#"> Left Sidebar </a>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">Right Sidebar</a>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">No Sidebar</a>
+                                    </li>
+                                    <li class="list_hov_item">
+                                        <a class="list_hov_link" href="#">Blog Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header_bottom_right_icon">
+                        <ul class="icon_list">
+                            <li class="icon_item">
+                                <img class="icon_img"
+                                    src="https://angular.pixelstrap.com/multikart/assets/images/icon/search.png"
+                                    alt="search">
+                            </li>
+                            <li class="icon_item header_dropdown">
+                                <img class="icon_img"
+                                    src="https://angular.pixelstrap.com/multikart/assets/images/icon/setting.png"
+                                    alt="setting">
+                                <div class="item_hover setting">
+                                    <h4>Language</h4>
+                                    <ul class="language_list">
+                                        <li class="language_item"><a class="language_link" href="#">English</a></li>
+                                        <li class="language_item"><a class="language_link" href="#">French</a></li>
+                                    </ul>
+                                    <h4>currency</h4>
+                                    <ul class="currency_list">
+                                        <li class="currency_item"><a class="currency_link" href="#">Euro</a></li>
+                                        <li class="currency_item"><a class="currency_link" href="#">Rupees</a></li>
+                                        <li class="currency_item"><a class="currency_link" href="#">Pound</a></li>
+                                        <li class="currency_item"><a class="currency_link" href="#">Dollar</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="icon_item header_dropdown">
+                                <span class="counter">0</span>
+                                <img class="icon_img"
+                                    src="https://angular.pixelstrap.com/multikart/assets/images/icon/cart.png"
+                                    alt="cart">
+                                <ul class="item_hover setting">
+                                    <h5 class="cart_message">Your cart is currently empty.</h5>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="title">
+            <div class="title_box">
+                <div class="title_of_page">
+                    <h2 class="title_h2">collection</h2>
+                </div>
+                <div class="location"><a href="">home</a> <span>/</span> collection</div>
+            </div>
+        </section>
+
+        <section class="collection_container">
+            <div class="collection_box">
+                <div class="collection_box_left">
+                    <div class="collection_left_top">
+                        <div class="category">
+                            <h3 class="category_title">category</h3>
+                            <div class="category_item">
+                                <ul class="category_list open">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collection_left_center">
+                        <div class="brand">
+                            <h3 class="brand_title">brand</h3>
+                            <div class="brand_filter">
+                                <div class="brand_name open">
+                                    <div class="collection_item beand_titan">
+                                        <input type="checkbox" value="titan" id="titan">
+                                        <label for="titan">titan</label>
+                                    </div>
+                                    <div class="collection_item beand_fossil">
+                                        <input type="checkbox" value="fossil" id="fossil">
+                                        <label for="fossil">fossil</label>
+                                    </div>
+                                    <div class="collection_item beand_casio">
+                                        <input type="checkbox" value="casio" id="casio">
+                                        <label for="casio">casio</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="colors">
+                            <h3 class="colors_title">colors</h3>
+                            <div class="colors_filter">
+                                <div class="color_box open">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            <h3 class="price_title">price</h3>
+
+                            <div class="price_filter">
+
+                                <div class="price_box  open">
+                                    <div id="RangeSlider" class="range-slider">
+                                        <div>
+                                            <div class="range-slider-val-left"></div>
+                                            <div class="range-slider-val-right"></div>
+                                            <div class="range-slider-val-range"></div>
+                                            <span class="range-slider-handle range-slider-handle-left"></span>
+                                            <span class="range-slider-handle range-slider-handle-right"></span>
+                                            <div class="range-slider-tooltip range-slider-tooltip-left">
+                                                <span class="range-slider-tooltip-text"></span>
+                                            </div>
+                                            <div class="range-slider-tooltip range-slider-tooltip-right">
+                                                <span class="range-slider-tooltip-text"></span>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="range-slider-input-left" tabindex="0" max="1000" min="0"
+                                            step="1">
+                                        <input type="range" class="range-slider-input-right" tabindex="0" max="1000" min="0"
+                                            step="1">
+                                        <div class="text">
+                                            <span class="left_text">0</span>
+                                            <span class="right_text">1000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="collection_left_bottom">
+                        <div class="new_product">
+                            <div class="new_product_head">
+                                <h5 class="new_product_title">New Products</h5>
+                                <i class="fa-solid fa-angle-left new_angle_left"></i>
+                                <i class="fa-solid fa-angle-right new_angle_right"></i>
+                            </div>
+                            <div class="new_product_box">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collection_left_banner">
+                        <a href="#"><img src="images/collection-sidebar-banner.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="collection_box_right">
+                    
+                </div>
+            </div>
+    </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_top">
+                <div class="footer_top_left">
+                    <h4 class="footer_top_title">know it all first!</h4>
+                    <p class="footer_top_text">Never Miss Anything From Multikart By Signing Up To Our Newsletter.
+                    </p>
+                </div>
+                <div class="footer_top_right">
+                    <form action="">
+                        <input class="footer_input" type="email" placeholder="Enter your email" name="email">
+                        <button class="footer_btn" type="submit">subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="footer_bottom_left">
+                    <div class="footer_bottom_logo">
+                        <img src="images/logo-14.png" alt="logo">
+                    </div>
+                    <p class="footer_bottom_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                    <div class="footer_bottom_icon">
+                        <ul class="footer_bottom_icon_list">
+                            <li class="footer_bottom_icon_item"><a href="#"><i aria-hidden="true"
+                                        class="footer_bottom_i fa fa-facebook"></i></a></li>
+                            <li class="footer_bottom_icon_item"><a href="#"><i aria-hidden="true"
+                                        class="footer_bottom_i fa fa-google-plus"></i></a></li>
+                            <li class="footer_bottom_icon_item"><a href="#"><i aria-hidden="true"
+                                        class="footer_bottom_i fa fa-twitter"></i></a></li>
+                            <li class="footer_bottom_icon_item"><a href="#"><i aria-hidden="true"
+                                        class="footer_bottom_i fa fa-instagram"></i></a></li>
+                            <li class="footer_bottom_icon_item"><a href="#"><i aria-hidden="true"
+                                        class="footer_bottom_i fa fa-rss"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_bottom_center footer_margin">
+                    <div class="footer_bottom_center_title">
+                        <h4 class="footer_bottom_center_h4">Categories</h4>
+                    </div>
+                    <div class="footer_bottom_center_content">
+                        <ul>
+                            <li class="footer_bottom_center_item list_hov_item"><a
+                                    class="footer_bottom_center_link footer_hov_link" href="#">Womens Fashion</a>
+                            </li>
+                            <li class="footer_bottom_center_item list_hov_item"><a
+                                    class="footer_bottom_center_link footer_hov_link" href="#">Mens Fashion</a></li>
+                            <li class="footer_bottom_center_item list_hov_item"><a
+                                    class="footer_bottom_center_link footer_hov_link" href="#">Kids Fashion</a></li>
+                            <li class="footer_bottom_center_item list_hov_item"><a
+                                    class="footer_bottom_center_link footer_hov_link" href="#">Featured</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_bottom_center">
+                    <div class="footer_bottom_center_title">
+                        <h4 class="footer_bottom_center_h4">why we choose</h4>
+                    </div>
+                    <div class="footer_bottom_center_content">
+                        <ul>
+                            <li class="footer_bottom_center_item list_hov_item"><a
+                                    class="footer_bottom_center_link footer_hov_link" href="#">shipping & return</a>
+                            </li>
+                            <li class="footer_bottom_center_item list_hov_item"><a
+                                    class="footer_bottom_center_link footer_hov_link" href="#">secure shopping</a>
+                            </li>
+                            <li class="footer_bottom_center_item list_hov_item"><a
+                                    class="footer_bottom_center_link footer_hov_link" href="#">gallary</a></li>
+                            <li class="footer_bottom_center_item list_hov_item"><a
+                                    class="footer_bottom_center_link footer_hov_link" href="#">affiliates</a></li>
+                            <li class="footer_bottom_center_item list_hov_item"><a
+                                    class="footer_bottom_center_link footer_hov_link" href="#">contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_bottom_center">
+                    <div class="footer_bottom_center_title">
+                        <h4 class="footer_bottom_center_h4">store information</h4>
+                    </div>
+                    <div class="footer_bottom_center_content">
+                        <ul>
+                            <li class="footer_bottom_center_item footer_bootom_item_left"><i
+                                    class="footer_bottom_center_i fa fa-map-marker"></i>Multikart Demo Store, Demo
+                                Store India 345-659</a></li>
+                            <li class="footer_bottom_center_item footer_bootom_item_left"><i
+                                    class="footer_bottom_center_i fa fa-phone"></i>Call Us: 123-456-7898</a></li>
+                            <li class="footer_bottom_center_item footer_bootom_item_left"><i
+                                    class="footer_bottom_center_i fa fa-envelope-o"></i>Email Us:
+                                Support@Fiot.Com</a></li>
+                            <li class="footer_bottom_center_item footer_bootom_item_left"><i
+                                    class="footer_bottom_center_i fa fa-fax"></i>Fax: 123456</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub_footer">
+            <div class="sub_footer_container">
+                <div class="sub_footer_left">
+                    <p class="sub_footer_text">
+                        <i class="fa fa-copyright"></i>
+                        2023 theme forest powered by pixelstrap
+                    </p>
+                </div>
+                <div class="sub_footer_right">
+                    <ul class="sub_footer_icon_list">
+                        <li><a href="">
+                                <img class="sub_footer_icon" src="images/visa.png" alt="visa">
+                            </a></li>
+                        <li><a href="">
+                                <img class="sub_footer_icon" src="images/mastercard.png" alt="mastercard">
+                            </a></li>
+                        <li><a href="">
+                                <img class="sub_footer_icon" src="images/paypal.png" alt="paypal">
+                            </a></li>
+                        <li><a href="">
+                                <img class="sub_footer_icon" src="images/american-express.png" alt="american-expres">
+                            </a></li>
+                        <li><a href="">
+                                <img class="sub_footer_icon" src="images/discover.png" alt="discover">
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="left_btn">
+        <div class="setting_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="w-5 h-5 setting_btn_icon">
+                <path fill-rule="evenodd"
+                    d="M8.34 1.804A1 1 0 019.32 1h1.36a1 1 0 01.98.804l.295 1.473c.497.144.971.342 1.416.587l1.25-.834a1 1 0 011.262.125l.962.962a1 1 0 01.125 1.262l-.834 1.25c.245.445.443.919.587 1.416l1.473.294a1 1 0 01.804.98v1.361a1 1 0 01-.804.98l-1.473.295a6.95 6.95 0 01-.587 1.416l.834 1.25a1 1 0 01-.125 1.262l-.962.962a1 1 0 01-1.262.125l-1.25-.834a6.953 6.953 0 01-1.416.587l-.294 1.473a1 1 0 01-.98.804H9.32a1 1 0 01-.98-.804l-.295-1.473a6.957 6.957 0 01-1.416-.587l-1.25.834a1 1 0 01-1.262-.125l-.962-.962a1 1 0 01-.125-1.262l.834-1.25a6.957 6.957 0 01-.587-1.416l-1.473-.294A1 1 0 011 10.68V9.32a1 1 0 01.804-.98l1.473-.295c.144-.497.342-.971.587-1.416l-.834-1.25a1 1 0 01.125-1.262l.962-.962A1 1 0 015.38 3.03l1.25.834a6.957 6.957 0 011.416-.587l.294-1.473zM13 10a3 3 0 11-6 0 3 3 0 016 0z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+        <div class="dark_light_btn">
+            <p>Dark</p>
+        </div>
+    </section>
+    </div>
+
+
+    <script src="js/collection.js"></script>
+    <script src="js/header&footer.js"></script>
+</body>
+
+</html>
