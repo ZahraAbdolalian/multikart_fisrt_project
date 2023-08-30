@@ -1,5 +1,17 @@
 let $ = document
 
+//header sticky
+
+let headerBottom = $.querySelector('.header_bottom')
+
+document.addEventListener('scroll', () => {
+
+    if (document.documentElement.scrollTop > 200) {
+        headerBottom.classList.add('sticky')
+    } else {
+        headerBottom.classList.remove('sticky')
+    }
+})
 
 // open
 let categoryTitle = $.querySelector('.category_title')
@@ -235,10 +247,12 @@ function displayPtoductGrid(currentRow) {
     let endIndex = productCount * currentpage
     let startIndex = endIndex - productCount
 
-    countTextUp.innerHTML = `Showing Products ${(startIndex > 16) && startIndex - 15 || 1}-${(endIndex > productArray.length) && 1 || endIndex} of ${productArray.length} Result`
-    countTextBottom.innerHTML = `Showing Products ${(startIndex > 16) && startIndex - 15 || 1}-${(endIndex > productArray.length) && 1 || endIndex} of ${productArray.length} Result`
-
     let paginatedProduct = productArray.slice(startIndex, endIndex)
+
+    let countText = `Showing Products 1-${paginatedProduct.length} of ${productArray.length} Result`
+
+    countTextUp.innerHTML = countText
+    countTextBottom.innerHTML = countText
 
     paginatedProduct.forEach(product => {
         productGrid.insertAdjacentHTML('beforeend', `
@@ -320,11 +334,12 @@ function displayProductList() {
     let endIndex = productCount * currentpage
     let startIndex = endIndex - productCount
 
-    countTextUp.innerHTML = `Showing Products ${(startIndex > 16) && startIndex - 15 || 1}-${(endIndex > productArray.length) && 1 || endIndex} of ${productArray.length} Result`
-    countTextBottom.innerHTML = `Showing Products ${(startIndex > 16) && startIndex - 15 || 1}-${(endIndex > productArray.length) && 1 || endIndex} of ${productArray.length} Result`
-
-
     let paginatedProduct = productArray.slice(startIndex, endIndex)
+
+    let countText = `Showing Products 1-${paginatedProduct.length} of ${productArray.length} Result`
+
+    countTextUp.innerHTML = countText
+    countTextBottom.innerHTML = countText
 
     paginatedProduct.forEach(product => {
         productList.insertAdjacentHTML('beforeend', `

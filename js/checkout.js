@@ -22,7 +22,9 @@ stripeOption.addEventListener('change', () => {
 })
 
 
-/////////////////////////////////////////////////////
+
+//header sticky
+
 let headerBottom = $.querySelector('.header_bottom')
 
 document.addEventListener('scroll', () => {
@@ -33,6 +35,8 @@ document.addEventListener('scroll', () => {
         headerBottom.classList.remove('sticky')
     }
 })
+
+//////////////////////////////
 
 let firstnameInput = $.querySelector('.firstname_input')
 let lastnameInput = $.querySelector('.lastname_input')
