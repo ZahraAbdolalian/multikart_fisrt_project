@@ -84,3 +84,91 @@ function changeSlid() {
 
 angleLeft.addEventListener('click', changeSlid)
 angleRight.addEventListener('click', changeSlid)
+
+//related product
+
+let relatedProductsContainer = $.querySelector('.related_product_list')
+
+let relatedProductList =[
+    { id: 1, src: 'images/trending1.jpg', name: 'Watch 1', discountedPrice: '$156.00', price: '$260.00', colors: 'silver', onsale: false },
+    { id: 2, src: 'images/trending2.jpg', name: 'Watch 2', discountedPrice: '$207.00', price: '$345.00', colors: 'silver sienna', onsale: false },
+    { id: 3, src: 'images/trending3.jpg', name: 'Watch 3', discountedPrice: '$356.00', price: '$445.00', colors: 'navy', onsale: true },
+    { id: 4, src: 'images/trending4.jpg', name: 'Watch 4', discountedPrice: '$466.40', price: '$530.00', colors: 'bisque', onsale: true },
+    { id: 5, src: 'images/trending5.jpg', name: 'Watch 5', discountedPrice: '$218.40', price: '$420.00', colors: 'chocolate navy', onsale: true },
+    { id: 6, src: 'images/trending6.jpg', name: 'Watch 6', discountedPrice: '$135.00', price: '$225.00', colors: 'steelblue bisque', onsale: false },
+]
+
+relatedProductList.forEach(product => {
+    relatedProductsContainer.insertAdjacentHTML('beforeend' , `
+
+        <div class="related_product_item">
+            <div class="related_product_item_box">
+                <div class="related_product_img_box">
+                    <span class="new_sapn">
+                        new
+                    </span>
+                    <a href="">
+                        <img class="related_product_img" src="${product.src}" alt="">
+                        
+                     </a>
+                    <div class="related_product_icons">
+                        <a class="related_product_icons_link" href="#">
+                                <i
+                                class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
+                        </a>
+                
+                        <a class="related_product_icons_link" href="#">
+                                <i class="fa fa-heart shopping heart"></i>
+                        </a>
+                
+                        <a class="related_product_icons_link" href="#">
+                            <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
+                        </a>
+                
+                        <a class="related_product_icons_link" href="#">
+                            <i class="fa fa-refresh shopping refresh"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="related_product_detail">
+                    <div class="stars">
+                        <div class="star">★</div>
+                        <div class="star">★</div>
+                        <div class="star">★</div>
+                        <div class="star">★</div>
+                        <div class="star">★</div>
+                    </div>
+                    <a href="">
+                            <h6 class="related_product_name">${product.name}</h6>
+                    </a>
+                        <h4 class="related_product_discounted_price"> ${product.discountedPrice}
+                            <del class="related_product_price">${product.price}</del>
+                        </h4>
+                    <ul class="related_product_color_list">
+                        
+                    </ul>
+                
+                </div>
+                
+            </div>
+        </div>
+
+    `)
+
+    let productColorList = $.querySelectorAll('.related_product_color_list')
+        let colorsArray = product.colors.split(' ')
+        let productImgBox = $.querySelectorAll('.related_product_img_box')
+        colorsArray.forEach(color => {
+            productColorList[product.id - 1].insertAdjacentHTML('beforeend',
+                `<li class="${color} product_color"></li>`
+            )
+        })
+
+        if (product.onsale) {
+            productImgBox[product.id- 1].insertAdjacentHTML('afterbegin',
+                `<span class="product_on_sale">
+            on sale
+        </span>`
+            )
+        }
+})
