@@ -103,8 +103,6 @@ document.addEventListener('change', () => {
         else {
             num.push(false)
         }
-        console.log(isfull);
-        console.log(num);
     })
     if (userCountry.value == 'Select Country') {
         isfull = false

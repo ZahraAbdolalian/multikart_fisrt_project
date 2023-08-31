@@ -859,11 +859,11 @@
                         <div class="product_box_right_img">
                             <img class="main_img" src="images/trending1.jpg" alt="">
                             <div class="product_all_img">
-                                <div class="">
-                                    <img src="images/trending1.jpg" alt="">
+                                <div>
+                                    <img class="product_imgs selected_img" src="images/trending1.jpg" alt="">
                                 </div>
                                 <div class="">
-                                    <img src="images/watch1_2.jpg" alt="">
+                                    <img class="product_imgs" src="images/watch1_2.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -876,24 +876,25 @@
                                 </h4>
                                 <h3 class="product_price"> $156.00 </h3>
                                 <ul class="product_color">
-                                    <li class="silver"></li>
+                                    <li class="silver selected"></li>
+                                    <li class="sienna"></li>
                                 </ul>
                             </div>
                             <div class="product_quantity quantity_wrapper">
-                                <h5>In Stock</h5>
+                                <h5 class="stock">In Stock</h5>
                                 <h6>quantity</h6>
                                 <div class="quantity_box">
-                                    <button class="quantity_btn" type="button">
+                                    <button class="quantity_btn quantity_btn_left" type="button">
                                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                                     </button>
-                                    <div>1</div>
-                                    <button class="quantity_btn" type="button">
+                                    <div class="quantity_num">1</div>
+                                    <button class="quantity_btn quantity_btn_right" type="button">
                                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                                     </button>
                                 </div>
                                 <div class="quantity_link">
-                                    <a href="">add to cart</a>
-                                    <a href="">buy now</a>
+                                    <a class="able quantity_link_btn" href="">add to cart</a>
+                                    <a class="able quantity_link_btn" href="">buy now</a>
                                 </div>
                             </div>
                             <div class="product_details">
@@ -942,22 +943,22 @@
                                 <div>
                                     <p>
                                         <span class="timer_box">
-                                            <span class="timer_num">-861</span>
+                                            <span class="timer_num day">-861</span>
                                             <span class="timer_dot">:</span>
                                             <span class="timer_cal">Days</span>
                                         </span>
                                         <span class="timer_box">
-                                            <span class="timer_num">-13</span>
+                                            <span class="timer_num hour">-13</span>
                                             <span class="timer_dot">:</span>
                                             <span class="timer_cal">Hrs</span>
                                         </span>
                                         <span class="timer_box">
-                                            <span class="timer_num">-2</span>
+                                            <span class="timer_num minute">-2</span>
                                             <span class="timer_dot">:</span>
                                             <span class="timer_cal">Min</span>
                                         </span>
                                         <span class="timer_box">
-                                            <span class="timer_num">-8</span>
+                                            <span class="timer_num second">-8</span>
                                             <span class="timer_cal">Sec</span>
                                         </span>
                                     </p>
@@ -968,24 +969,24 @@
                     <div class="product_right_bottom">
                         <ul>
                             <li>
-                                <p class="active">Description</p>
+                                <p class="description_title active">Description</p>
                             </li>
                             <li>
-                                <p>Video</p>
+                                <p class="video_title ">Video</p>
                             </li>
                             <li>
-                                <p>Write Review</p>
+                                <p class="write_review_title ">Write Review</p>
                             </li>
                         </ul>
 
                         <div class="product_right_bottom_content">
-                            <div class="unshow">
+                            <div class="show description_content">
                                 <p class="description">
                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
                                 </p>
                             </div>
 
-                            <div class="show">
+                            <div class="write_review_content unshow">
                                 <form action="">
                                     <div class="Write_box">
                                         <div class="rating_box">
@@ -1021,6 +1022,10 @@
                                         </div>
                                     </div>
                                 </form>
+                            </div>
+
+                            <div class="video_content unshow">
+
                             </div>
 
                         </div>

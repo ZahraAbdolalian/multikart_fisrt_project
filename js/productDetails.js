@@ -1,6 +1,19 @@
 let $ = document
 
 
+//header sticky
+
+let headerBottom = $.querySelector('.header_bottom')
+
+document.addEventListener('scroll', () => {
+
+    if (document.documentElement.scrollTop > 200) {
+        headerBottom.classList.add('sticky')
+    } else {
+        headerBottom.classList.remove('sticky')
+    }
+})
+
 // open
 let categoryTitle = $.querySelector('.category_title')
 let categoryList = $.querySelector('.category_list')
@@ -89,7 +102,7 @@ angleRight.addEventListener('click', changeSlid)
 
 let relatedProductsContainer = $.querySelector('.related_product_list')
 
-let relatedProductList =[
+let relatedProductList = [
     { id: 1, src: 'images/trending1.jpg', name: 'Watch 1', discountedPrice: '$156.00', price: '$260.00', colors: 'silver', onsale: false },
     { id: 2, src: 'images/trending2.jpg', name: 'Watch 2', discountedPrice: '$207.00', price: '$345.00', colors: 'silver sienna', onsale: false },
     { id: 3, src: 'images/trending3.jpg', name: 'Watch 3', discountedPrice: '$356.00', price: '$445.00', colors: 'navy', onsale: true },
@@ -99,7 +112,7 @@ let relatedProductList =[
 ]
 
 relatedProductList.forEach(product => {
-    relatedProductsContainer.insertAdjacentHTML('beforeend' , `
+    relatedProductsContainer.insertAdjacentHTML('beforeend', `
 
         <div class="related_product_item">
             <div class="related_product_item_box">
@@ -156,19 +169,137 @@ relatedProductList.forEach(product => {
     `)
 
     let productColorList = $.querySelectorAll('.related_product_color_list')
-        let colorsArray = product.colors.split(' ')
-        let productImgBox = $.querySelectorAll('.related_product_img_box')
-        colorsArray.forEach(color => {
-            productColorList[product.id - 1].insertAdjacentHTML('beforeend',
-                `<li class="${color} product_color"></li>`
-            )
-        })
+    let colorsArray = product.colors.split(' ')
+    let productImgBox = $.querySelectorAll('.related_product_img_box')
+    colorsArray.forEach(color => {
+        productColorList[product.id - 1].insertAdjacentHTML('beforeend',
+            `<li class="${color} related_product_color"></li>`
+        )
+    })
 
-        if (product.onsale) {
-            productImgBox[product.id- 1].insertAdjacentHTML('afterbegin',
-                `<span class="product_on_sale">
+    if (product.onsale) {
+        productImgBox[product.id - 1].insertAdjacentHTML('afterbegin',
+            `<span class="product_on_sale">
             on sale
         </span>`
-            )
-        }
+        )
+    }
+})
+
+
+
+// quantity button
+
+let quantityNumber = $.querySelector('.quantity_num')
+let quantityBtnLeft = $.querySelector('.quantity_btn_left')
+let quantityBtnRight = $.querySelector('.quantity_btn_right')
+let stock = $.querySelector('.stock')
+let quantityLinkBtn = $.querySelectorAll('.quantity_link_btn')
+
+
+quantityBtnLeft.addEventListener('click', () => {
+    let num = quantityNumber.innerHTML
+
+    if (num > 1) {
+        num--
+        quantityNumber.innerHTML = num
+    }
+
+    if (num <= 15) {
+        stock.innerHTML = 'In Stock'
+        quantityLinkBtn.forEach(button => {
+            button.classList.replace('disable', 'able')
+            button.href = ''
+        })
+    }
+})
+
+quantityBtnRight.addEventListener('click', () => {
+    let num = quantityNumber.innerHTML
+    num++
+    quantityNumber.innerHTML = num
+
+    if (num > 15) {
+        stock.innerHTML = 'Out of Stock'
+        quantityLinkBtn.forEach(button => {
+            button.classList.replace('able', 'disable')
+            button.href = ' URL:void(0)'
+        })
+    }
+})
+
+
+//change main image
+
+let mainImg = $.querySelector('.main_img')
+let productImgs = $.querySelectorAll('.product_imgs')
+let oldSrc = mainImg.src
+productImgs.forEach(img => {
+    img.addEventListener('click', () => {
+        productImgs.forEach(image => {
+            if (image.src == oldSrc) {
+                image.classList.remove('selected_img')
+            }
+        })
+        console.log(img.src);
+        mainImg.src = img.src
+        img.classList.add('selected_img')
+        oldSrc = img.src
+    })
+})
+
+
+// time reminder
+let day = $.querySelector('.day')
+let hour = $.querySelector('.hour')
+let minute = $.querySelector('.minute')
+let second = $.querySelector('.second')
+
+
+setInterval(function () {
+
+    let time = new Date()
+
+    let dayValue = 800 - time.getDay()
+    let hoursValue = time.getHours()
+    let minutesValue = time.getMinutes()
+    let secondsValue = time.getSeconds()
+
+    day.innerHTML = `-${dayValue}`
+    hour.innerHTML = `-${hoursValue}`
+    minute.innerHTML = `-${minutesValue}`
+    second.innerHTML = `-${secondsValue}`
+}, 1000)
+
+
+// product_right_bottom
+let description = $.querySelector('.description_title')
+let descriptionContent = $.querySelector('.description_content')
+let video = $.querySelector('.video_title')
+let videoContent = $.querySelector('.video_content')
+let writeReview = $.querySelector('.write_review_title')
+let writeReviewContent = $.querySelector('.write_review_content')
+let selectedElem = description
+let showContent = descriptionContent
+
+
+function changeContent(elem, content) {
+    selectedElem.classList.remove('active')
+    showContent.classList.replace('show', 'unshow')
+    elem.classList.add('active')
+    content.classList.replace('unshow', 'show')
+    selectedElem = elem
+    showContent = content
+}
+
+description.addEventListener('click', () => {
+    changeContent(description, descriptionContent)
+})
+
+video.addEventListener('click', () => {
+    changeContent(video, videoContent)
+})
+
+writeReview.addEventListener('click', () => {
+    changeContent(writeReview, writeReviewContent)
 })
