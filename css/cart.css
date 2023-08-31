@@ -243,7 +243,6 @@ td {
     transition: background 300ms ease-in-out;
 }
 
-
 .cart_button a:hover{
     background-position: 100%;
     color: #000000;
@@ -253,4 +252,47 @@ td {
 
 .cart_button:last-child{
     padding-right: 26px;
+}
+
+/* alert */
+
+
+
+.alret_container{
+    width: 345px;
+    height: 78px;
+    background-color: #BD362F;
+    color: #ffffff;
+    border-radius: 19px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.disable{
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.alert_mark{
+    font-size: 25px;
+    cursor: pointer;
+    padding-left: 16px;
+}
+
+
+.alret_text{
+    padding-left: 13px;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.alret_container:hover{
+    box-shadow: 0px 0px 13px 0px #222222;
+    transition: all 0.3s ease;
 }
