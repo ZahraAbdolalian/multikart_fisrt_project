@@ -438,6 +438,36 @@ let prevBtn = $.querySelector('.prev')
 let nextBtn = $.querySelector('.next')
 let numButtons = $.querySelectorAll('.num_button')
 let pageCount = Math.ceil(productArray.length / productCount)
+let lastPage = currentpage
+
+numButtons.forEach (btn => {
+    btn.addEventListener('click' , () => {
+        currentpage = btn.innerHTML
+        if (isGrid) {
+            displayPtoductGrid(currentRow)
+        } else {
+            displayProductList()
+        }
+
+        if (currentpage == 1) {
+            prevBtn.classList.add('disable_prev')
+            nextBtn.classList.remove('disable_prev')
+        }else if (currentpage == pageCount) {
+            nextBtn.classList.add('disable_prev')
+            prevBtn.classList.remove('disable_prev')
+        }
+
+        numButtons.forEach(numBtn => {
+            if (numBtn.innerHTML == currentpage) {
+                numBtn.parentElement.classList.add('active')
+            }
+            if (numBtn.innerHTML == lastPage) {
+                numBtn.parentElement.classList.remove('active')
+            }
+        })
+        lastPage = currentpage
+    })
+})
 
 prevBtn.addEventListener('click', () => {
 
