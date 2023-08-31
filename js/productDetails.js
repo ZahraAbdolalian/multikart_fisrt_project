@@ -41,6 +41,168 @@ categoryArray.forEach(category => {
 })
 
 
+
+
+//add product
+
+let productsArray = [
+    { id: 1, src: 'images/trending1.jpg', src2: 'images/trending1.jpg images/watch1_2.jpg', name: 'Watch 1', discountedPrice: '$156.00', price: '$260.00', colors: 'silver', onsale: false },
+    { id: 2, src: 'images/trending2.jpg', src2: 'images/trending2.jpg images/trending1.jpg', name: 'Watch 2', discountedPrice: '$207.00', price: '$345.00', colors: 'silver sienna', onsale: false },
+    { id: 3, src: 'images/trending3.jpg', src2: 'images/trending3.jpg images/watch3_1.jpg', name: 'Watch 3', discountedPrice: '$356.00', price: '$445.00', colors: 'navy', onsale: true },
+    { id: 4, src: 'images/trending4.jpg', src2: 'images/trending4.jpg images/watch10.jpg images/watch7.jpg', name: 'Watch 4', discountedPrice: '$466.40', price: '$530.00', colors: 'bisque', onsale: true },
+    { id: 5, src: 'images/trending5.jpg', src2: 'images/trending5.jpg images/trending3.jpg', name: 'Watch 5', discountedPrice: '$218.40', price: '$420.00', colors: 'chocolate navy', onsale: true },
+    { id: 6, src: 'images/trending6.jpg', src2: 'images/trending6.jpg images/trending4.jpg', name: 'Watch 6', discountedPrice: '$135.00', price: '$225.00', colors: 'steelblue bisque', onsale: false },
+    { id: 7, src: 'images/trending7.jpg', src2: 'images/trending7.jpg images/watch1_2.jpg', name: 'Watch 14', discountedPrice: '$122.20', price: '$130.00', colors: 'silver wheat', onsale: false },
+    { id: 8, src: 'images/watch8.jpg', src2: 'images/watch8.jpg images/watch1_2.jpg', name: 'Watch 8', discountedPrice: '$80.00', price: '$160.00', colors: 'dimgrey sienna', onsale: false },
+    { id: 9, src: 'images/watch9.jpg', src2: 'images/watch9.jpg images/watch1_2.jpg', name: 'Watch 8', discountedPrice: '$80.00', price: '$160.00', colors: 'black sienna', onsale: false },
+    { id: 10, src: 'images/watch10.jpg', src2: 'images/watch10.jpg images/watch1_2.jpg', name: 'Watch 10', discountedPrice: '$346.50 ', price: '$495.00', colors: 'silver palegoldenrod', onsale: true },
+    { id: 11, src: 'images/watch11.jpg', src2: 'images/watch11.jpg images/watch1_2.jpg', name: 'Watch 11', discountedPrice: '$86.00 ', price: '$215.00', colors: 'dimgray chocolate', onsale: false },
+    { id: 12, src: 'images/watch12.jpg', src2: 'images/watch12.jpg images/watch1_2.jpg', name: 'Watch 12', discountedPrice: '$135.00', price: '$150.00', colors: 'palegoldenrod bisque', onsale: true },
+    { id: 13, src: 'images/watch13.jpg', src2: 'images/watch13.jpg images/watch1_2.jpg', name: 'Watch 13', discountedPrice: '$144.00 ', price: '$360.00', colors: 'black chocolate', onsale: true },
+    { id: 14, src: 'images/watch15.jpg', src2: 'images/watch15.jpg images/watch1_2.jpg', name: 'Watch 14', discountedPrice: '$122.20', price: '$130.00', colors: 'silver wheat', onsale: false },
+    { id: 15, src: 'images/watch7.jpg', src2: 'images/watch7.jpg images/watch1_2.jpg', name: 'Watch 7', discountedPrice: '$156.60 ', price: '$174.00', colors: 'wheat silver', onsale: false },
+]
+
+let productBox = $.querySelector('.product_box_right')
+let locationParams = new URLSearchParams(location.search)
+let mainProductId = locationParams.get('id')
+console.log(mainProductId);
+
+let mainProductObject = productsArray.find(function (product) {
+    return product.id === +mainProductId
+})
+
+console.log(mainProductObject);
+
+productBox.insertAdjacentHTML('beforeend', `
+<div class="product_box_right_img">
+    <img class="main_img" src="${mainProductObject.src}" alt="">
+    <div class="product_all_img">
+        
+    </div>
+</div>
+<div class="product_box_right_infos">
+    <div class="product_details">
+        <h2 class="product_name">${mainProductObject.name}</h2>
+        <h4 class="product_discount_price">
+            <del>${mainProductObject.discountedPrice}</del>
+            <span>40% Off</span>
+        </h4>
+        <h3 class="product_price"> ${mainProductObject.price} </h3>
+        <ul class="product_color">
+            
+        </ul>
+    </div>
+    <div class="product_quantity quantity_wrapper">
+        <h5 class="stock">In Stock</h5>
+        <h6>quantity</h6>
+        <div class="quantity_box">
+            <button class="quantity_btn quantity_btn_left" type="button">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <div class="quantity_num">1</div>
+            <button class="quantity_btn quantity_btn_right" type="button">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="quantity_link">
+            <a class="able quantity_link_btn" href="">add to cart</a>
+            <a class="able quantity_link_btn" href="">buy now</a>
+        </div>
+    </div>
+    <div class="product_details">
+        <h6>product details</h6>
+        <p>It is a long established fact that a reader will be distracted by the readable content of
+            a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distrib...</p>
+    </div>
+    <div class="product_media">
+        <h6>share it</h6>
+        <div>
+            <div class="media_icons">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i _ngcontent-serverapp-c2628554100="" class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i _ngcontent-serverapp-c2628554100="" class="fa fa-google-plus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i _ngcontent-serverapp-c2628554100="" class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="instagram">
+                            <i _ngcontent-serverapp-c2628554100="" class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="wishlist_btn">
+                <button>
+                    <i _ngcontent-serverapp-c3931259297="" class="fa fa-heart"></i>
+                    <span>Add To WishList</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="product_reminder">
+        <h6>Time Reminder</h6>
+        <div>
+            <p>
+                <span class="timer_box">
+                    <span class="timer_num day">-861</span>
+                    <span class="timer_dot">:</span>
+                    <span class="timer_cal">Days</span>
+                </span>
+                <span class="timer_box">
+                    <span class="timer_num hour">-13</span>
+                    <span class="timer_dot">:</span>
+                    <span class="timer_cal">Hrs</span>
+                </span>
+                <span class="timer_box">
+                    <span class="timer_num minute">-2</span>
+                    <span class="timer_dot">:</span>
+                    <span class="timer_cal">Min</span>
+                </span>
+                <span class="timer_box">
+                    <span class="timer_num second">-8</span>
+                    <span class="timer_cal">Sec</span>
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
+`)
+
+let colorList = $.querySelector('.product_color')
+let colorsArray = mainProductObject.colors.split(' ')
+
+colorsArray.forEach(color => {
+    colorList.insertAdjacentHTML('beforeend',
+        `<li class="${color} trending_color"></li>`
+    )
+})
+
+let imageSrcArray = mainProductObject.src2.split(' ')
+let productAllImg = $.querySelector('.product_all_img')
+console.log(imageSrcArray);
+
+imageSrcArray.forEach(imageSrc => {
+    productAllImg.insertAdjacentHTML('beforeend', `
+    <div>
+        <img class="product_imgs" src="${imageSrc}" alt="">
+    </div>
+    `)
+})
+let productImg = $.querySelector('.product_imgs')
+productImg.classList.add('selected_img')
+
 // new product
 
 let newProductArray = [
@@ -303,3 +465,5 @@ video.addEventListener('click', () => {
 writeReview.addEventListener('click', () => {
     changeContent(writeReview, writeReviewContent)
 })
+
+
