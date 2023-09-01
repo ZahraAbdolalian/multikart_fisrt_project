@@ -53,7 +53,7 @@ let productsArray = [
     { id: 5, src: 'images/trending5.jpg', src2: 'images/trending5.jpg images/trending3.jpg', name: 'Watch 5', discountedPrice: '$218.40', price: '$420.00', colors: 'chocolate navy', onsale: true },
     { id: 6, src: 'images/trending6.jpg', src2: 'images/trending6.jpg images/trending4.jpg', name: 'Watch 6', discountedPrice: '$135.00', price: '$225.00', colors: 'steelblue bisque', onsale: false },
     { id: 7, src: 'images/trending7.jpg', src2: 'images/trending7.jpg images/watch1_2.jpg', name: 'Watch 14', discountedPrice: '$122.20', price: '$130.00', colors: 'silver wheat', onsale: false },
-    { id: 8, src: 'images/watch8.jpg', src2: 'images/watch8.jpg images/watch1_2.jpg', name: 'Watch 8', discountedPrice: '$80.00', price: '$160.00', colors: 'dimgrey sienna', onsale: false },
+    { id: 8, src: 'images/watch8.jpg', src2: 'images/watch8.jpg images/watch1_2.jpg', name: 'Watch 8', discountedPrice: '$80.00', price: '$160.00', colors: 'dimgrey silver', onsale: false },
     { id: 9, src: 'images/watch9.jpg', src2: 'images/watch9.jpg images/watch1_2.jpg', name: 'Watch 8', discountedPrice: '$80.00', price: '$160.00', colors: 'black sienna', onsale: false },
     { id: 10, src: 'images/watch10.jpg', src2: 'images/watch10.jpg images/watch1_2.jpg', name: 'Watch 10', discountedPrice: '$346.50 ', price: '$495.00', colors: 'silver palegoldenrod', onsale: true },
     { id: 11, src: 'images/watch11.jpg', src2: 'images/watch11.jpg images/watch1_2.jpg', name: 'Watch 11', discountedPrice: '$86.00 ', price: '$215.00', colors: 'dimgray chocolate', onsale: false },
@@ -106,8 +106,8 @@ productBox.insertAdjacentHTML('beforeend', `
             </button>
         </div>
         <div class="quantity_link">
-            <a class="able quantity_link_btn" href="">add to cart</a>
-            <a class="able quantity_link_btn" href="">buy now</a>
+            <a class="able quantity_link_btn" href="cart.html?id=${mainProductObject.id}">add to cart</a>
+            <a class="able quantity_link_btn" href="checkout.html">buy now</a>
         </div>
     </div>
     <div class="product_details">
@@ -185,9 +185,12 @@ let colorsArray = mainProductObject.colors.split(' ')
 
 colorsArray.forEach(color => {
     colorList.insertAdjacentHTML('beforeend',
-        `<li class="${color} trending_color"></li>`
+        `<li class="${color}"></li>`
     )
 })
+
+let colorSelected = $.querySelector(`.${colorsArray[0]}`)
+colorSelected.classList.add('selected')
 
 let imageSrcArray = mainProductObject.src2.split(' ')
 let productAllImg = $.querySelector('.product_all_img')
@@ -201,17 +204,37 @@ imageSrcArray.forEach(imageSrc => {
     `)
 })
 let productImg = $.querySelector('.product_imgs')
+let allProductImg = $.querySelectorAll('.product_imgs')
+let mainImgElem = $.querySelector('.main_img')
+let lastColor = colorSelected
+let lastImg = productImg
 productImg.classList.add('selected_img')
+
+
+colorsArray.forEach((color, index) => {
+    let colorElem = $.querySelector(`.${color}`)
+    colorElem.addEventListener('click', () => {
+        lastImg.classList.remove('selected_img')
+        lastColor.classList.remove('selected')
+
+        colorElem.classList.add('selected')
+        allProductImg[index].classList.add('selected_img')
+        lastColor = colorElem
+        lastImg = allProductImg[index]
+        mainImgElem.src = imageSrcArray[index]
+
+    })
+})
 
 // new product
 
 let newProductArray = [
-    { name: 'Watch 1', url: 'images/trending1.jpg', newPrice: '$156.00', oldPrice: '$260.00' },
-    { name: 'Watch 2', url: 'images/trending2.jpg', newPrice: '$207.00', oldPrice: '$345.00' },
-    { name: 'Watch 3', url: 'images/trending3.jpg', newPrice: '$356.00', oldPrice: '$445.00' },
-    { name: 'Watch 4', url: 'images/trending4.jpg', newPrice: '$466.40', oldPrice: '$530.00' },
-    { name: 'Watch 5', url: 'images/trending5.jpg', newPrice: '$215.40', oldPrice: '$420.00' },
-    { name: 'Watch 6', url: 'images/trending6.jpg', newPrice: '$135.00', oldPrice: '$225.00' }
+    { id: 1, name: 'Watch 1', url: 'images/trending1.jpg', newPrice: '$156.00', oldPrice: '$260.00' },
+    { id: 2, name: 'Watch 2', url: 'images/trending2.jpg', newPrice: '$207.00', oldPrice: '$345.00' },
+    { id: 3, name: 'Watch 3', url: 'images/trending3.jpg', newPrice: '$356.00', oldPrice: '$445.00' },
+    { id: 4, name: 'Watch 4', url: 'images/trending4.jpg', newPrice: '$466.40', oldPrice: '$530.00' },
+    { id: 5, name: 'Watch 5', url: 'images/trending5.jpg', newPrice: '$215.40', oldPrice: '$420.00' },
+    { id: 6, name: 'Watch 6', url: 'images/trending6.jpg', newPrice: '$135.00', oldPrice: '$225.00' }
 ]
 
 let newProductBox = $.querySelector('.new_product_box')
@@ -232,7 +255,7 @@ function displayNewProduct() {
     paginatedNew.forEach(product => {
         newProductBox.insertAdjacentHTML('beforeend', `
     <div class="new_product_content">
-        <a href="">
+        <a href="productDetails.html?id=${product.id}">
             <img class="new_product_img" src="${product.url}" alt="new product">
         </a>
         <div>
@@ -282,25 +305,25 @@ relatedProductList.forEach(product => {
                     <span class="new_sapn">
                         new
                     </span>
-                    <a href="">
+                    <a href="productDetails.html?id=${product.id}">
                         <img class="related_product_img" src="${product.src}" alt="">
                         
                      </a>
                     <div class="related_product_icons">
-                        <a class="related_product_icons_link" href="#">
+                        <a class="related_product_icons_link" href="#" title="Add to cart">
                                 <i
                                 class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
                         </a>
                 
-                        <a class="related_product_icons_link" href="#">
+                        <a class="related_product_icons_link" href="#" title="Add to Wishlist">
                                 <i class="fa fa-heart shopping heart"></i>
                         </a>
                 
-                        <a class="related_product_icons_link" href="#">
+                        <a class="related_product_icons_link" href="#" title="Quick View">
                             <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
                         </a>
                 
-                        <a class="related_product_icons_link" href="#">
+                        <a class="related_product_icons_link" href="#" title="Compare">
                             <i class="fa fa-refresh shopping refresh"></i>
                         </a>
                     </div>

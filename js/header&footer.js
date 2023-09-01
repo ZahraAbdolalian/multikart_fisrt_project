@@ -158,6 +158,7 @@ settingBoxTitle[4].addEventListener('click', () => {
 let settingBackBtn = $.querySelector('.setting_back_btn')
 let settingBox = $.querySelector('.setting_box')
 let settingBtn = $.querySelector('.setting_btn')
+let clodeSettingBox = $.querySelector('.clode_setting_box')
 
 settingBackBtn.addEventListener('click',()=>{
     settingBox.classList.remove('active')
@@ -165,4 +166,9 @@ settingBackBtn.addEventListener('click',()=>{
 
 settingBtn.addEventListener('click',() => {
     settingBox.classList.add('active')
+})
+
+clodeSettingBox.addEventListener('click' , () => {
+    console.log('click');
+    settingBox.classList.remove('active')
 })

@@ -14,7 +14,6 @@ document.addEventListener('scroll', () => {
 })
 
 
-
 // quantity button
 
 let quantityNumber = $.querySelector('.quantity_num')
@@ -56,6 +55,8 @@ alertMark.addEventListener('click', () => {
 })
 
 
+
+
 // total product price
 let productTotalPrice = $.querySelector('.product_total_price')
 let quantityNum = $.querySelector('.quantity_num')
@@ -87,3 +88,14 @@ setTotalPrice()
 
 quantityBtnLeft.addEventListener('click', setTotalPrice)
 quantityBtnRight.addEventListener('click', setTotalPrice)
+
+
+//remove button
+let removeBtn = $.querySelector('.fa-xmark')
+let cartContainer = $.querySelector('.cart_container')
+let cartEmpty = $.querySelector('.cart_empty')
+
+removeBtn.addEventListener('click',() => {
+    cartContainer.classList.remove('open')
+    cartEmpty.classList.add('open')
+})

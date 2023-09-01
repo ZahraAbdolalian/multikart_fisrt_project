@@ -262,7 +262,7 @@ function displayPtoductGrid(currentRow) {
                 <span class="new_sapn">
                     new
                 </span>
-                <a href="">
+                <a href="productDetails.html?id=${product.id}">
                     <img class="product_img" src="${product.src}" alt="">
                     
                 </a>
@@ -348,7 +348,7 @@ function displayProductList() {
             <span class="new_sapn">
                 new
             </span>
-            <a href="">
+            <a href="productDetails.html?id=${product.id}">
                 <img class="product_img" src="${product.src}" alt="">
             </a>
             
