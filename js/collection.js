@@ -213,23 +213,23 @@ angleRight.addEventListener('click', changeSlid)
 // product list
 
 let productArray = [
-    { id: 1, src: 'images/trending1.jpg', name: 'Watch 1', discountedPrice: '$156.00', price: '$260.00', colors: 'silver', onsale: false },
-    { id: 2, src: 'images/trending2.jpg', name: 'Watch 2', discountedPrice: '$207.00', price: '$345.00', colors: 'silver sienna', onsale: false },
-    { id: 3, src: 'images/trending3.jpg', name: 'Watch 3', discountedPrice: '$356.00', price: '$445.00', colors: 'navy', onsale: true },
-    { id: 4, src: 'images/trending4.jpg', name: 'Watch 4', discountedPrice: '$466.40', price: '$530.00', colors: 'bisque', onsale: true },
-    { id: 5, src: 'images/trending5.jpg', name: 'Watch 5', discountedPrice: '$218.40', price: '$420.00', colors: 'chocolate navy', onsale: true },
-    { id: 6, src: 'images/trending6.jpg', name: 'Watch 6', discountedPrice: '$135.00', price: '$225.00', colors: 'steelblue bisque', onsale: false },
-    { id: 7, src: 'images/watch7.jpg', name: 'Watch 7', discountedPrice: '$156.60', price: '$174.00', colors: 'wheat silver', onsale: false },
-    { id: 8, src: 'images/watch8.jpg', name: 'Watch 8', discountedPrice: '$132.30', price: '$189.00', colors: 'dimgrey sienna', onsale: false },
-    { id: 9, src: 'images/watch9.jpg', name: 'Watch 9', discountedPrice: '$96.05', price: '$99.00', colors: 'black sienna', onsale: false },
-    { id: 10, src: 'images/watch10.jpg', name: 'Watch 10', discountedPrice: '$346.50', price: '$495.00', colors: 'silver palegoldenrod', onsale: true },
-    { id: 11, src: 'images/watch11.jpg', name: 'Watch 11', discountedPrice: '$86.00', price: '$215.00', colors: 'dimgrey chocolate', onsale: false },
-    { id: 12, src: 'images/watch12.jpg', name: 'Watch 12', discountedPrice: '$135.00', price: '$150.00', colors: 'palegoldenrod bisque', onsale: true },
-    { id: 13, src: 'images/watch13.jpg', name: 'Watch 13', discountedPrice: '$144.00', price: '$360.00', colors: 'black chocolate', onsale: true },
-    { id: 14, src: 'images/watch14.jpg', name: 'Watch 14', discountedPrice: '$265.05', price: '$285.00', colors: 'steelblue black', onsale: true },
-    { id: 15, src: 'images/watch15.jpg', name: 'Watch 15', discountedPrice: '$122.20', price: '$130.00', colors: 'silver wheat', onsale: false },
-    { id: 16, src: 'images/watch16.jpg', name: 'Watch 16', discountedPrice: '$239.04', price: '$249.00', colors: 'sienna navy', onsale: true },
-    { id: 17, src: 'images/trending4.jpg', name: 'Watch 17', discountedPrice: '$80.00', price: '$160.00', colors: 'bisque palegoldenrod silver', onsale: false },
+    { id: 1, index:1, src: 'images/trending1.jpg', name: 'Watch 1', discountedPrice: '$156.00', price: '$260.00', colors: 'silver', onsale: false },
+    { id: 2, index:2, src: 'images/trending2.jpg', name: 'Watch 2', discountedPrice: '$207.00', price: '$345.00', colors: 'silver sienna', onsale: false },
+    { id: 3, index:3, src: 'images/trending3.jpg', name: 'Watch 3', discountedPrice: '$356.00', price: '$445.00', colors: 'navy', onsale: true },
+    { id: 4, index:4, src: 'images/trending4.jpg', name: 'Watch 4', discountedPrice: '$466.40', price: '$530.00', colors: 'bisque', onsale: true },
+    { id: 5, index:5, src: 'images/trending5.jpg', name: 'Watch 5', discountedPrice: '$218.40', price: '$420.00', colors: 'chocolate navy', onsale: true },
+    { id: 6, index:6, src: 'images/trending6.jpg', name: 'Watch 6', discountedPrice: '$135.00', price: '$225.00', colors: 'steelblue bisque', onsale: false },
+    { id: 15, index:7, src: 'images/watch7.jpg', name: 'Watch 7', discountedPrice: '$156.60', price: '$174.00', colors: 'wheat silver', onsale: false },
+    { id: 8, index:8, src: 'images/watch8.jpg', name: 'Watch 8', discountedPrice: '$132.30', price: '$189.00', colors: 'dimgrey sienna', onsale: false },
+    { id: 9, index:9, src: 'images/watch9.jpg', name: 'Watch 9', discountedPrice: '$96.05', price: '$99.00', colors: 'black sienna', onsale: false },
+    { id: 10, index:10, src: 'images/watch10.jpg', name: 'Watch 10', discountedPrice: '$346.50', price: '$495.00', colors: 'silver palegoldenrod', onsale: true },
+    { id: 11, index:11, src: 'images/watch11.jpg', name: 'Watch 11', discountedPrice: '$86.00', price: '$215.00', colors: 'dimgrey chocolate', onsale: false },
+    { id: 12, index:12, src: 'images/watch12.jpg', name: 'Watch 12', discountedPrice: '$135.00', price: '$150.00', colors: 'palegoldenrod bisque', onsale: true },
+    { id: 13, index:13, src: 'images/watch13.jpg', name: 'Watch 13', discountedPrice: '$144.00', price: '$360.00', colors: 'black chocolate', onsale: true },
+    { id: 6, index:14, src: 'images/watch14.jpg', name: 'Watch 14', discountedPrice: '$265.05', price: '$285.00', colors: 'steelblue black', onsale: true },
+    { id: 14, index:15, src: 'images/watch15.jpg', name: 'Watch 15', discountedPrice: '$122.20', price: '$130.00', colors: 'silver wheat', onsale: false },
+    { id: 2, index:16, src: 'images/watch16.jpg', name: 'Watch 16', discountedPrice: '$239.04', price: '$249.00', colors: 'sienna navy', onsale: true },
+    { id: 4, index:17, src: 'images/trending4.jpg', name: 'Watch 17', discountedPrice: '$80.00', price: '$160.00', colors: 'bisque palegoldenrod silver', onsale: false },
 ]
 
 let productGrid = $.querySelector('.product_list')
@@ -312,13 +312,13 @@ function displayPtoductGrid(currentRow) {
         let colorsArray = product.colors.split(' ')
         let productImgBox = $.querySelectorAll('.product_img_box')
         colorsArray.forEach(color => {
-            productColorList[product.id - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('beforeend',
+            productColorList[product.index - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('beforeend',
                 `<li class="${color} product_color"></li>`
             )
         })
 
         if (product.onsale) {
-            productImgBox[product.id - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('afterbegin',
+            productImgBox[product.index - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('afterbegin',
                 `<span class="product_on_sale">
             on sale
         </span>`
@@ -398,13 +398,13 @@ function displayProductList() {
         colorsArray = product.colors.split(' ')
         let productImgBox = $.querySelectorAll('.product_img_box_list')
         colorsArray.forEach(color => {
-            productColorList[product.id - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('beforeend',
+            productColorList[product.index - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('beforeend',
                 `<li class="${color} product_color"></li>`
             )
         })
 
         if (product.onsale) {
-            productImgBox[product.id - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('afterbegin',
+            productImgBox[product.index - ((currentpage - 1) * 16) - 1].insertAdjacentHTML('afterbegin',
                 `<span class="product_on_sale">
             on sale
         </span>`
@@ -440,8 +440,8 @@ let numButtons = $.querySelectorAll('.num_button')
 let pageCount = Math.ceil(productArray.length / productCount)
 let lastPage = currentpage
 
-numButtons.forEach (btn => {
-    btn.addEventListener('click' , () => {
+numButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
         currentpage = btn.innerHTML
         if (isGrid) {
             displayPtoductGrid(currentRow)
@@ -452,7 +452,7 @@ numButtons.forEach (btn => {
         if (currentpage == 1) {
             prevBtn.classList.add('disable_prev')
             nextBtn.classList.remove('disable_prev')
-        }else if (currentpage == pageCount) {
+        } else if (currentpage == pageCount) {
             nextBtn.classList.add('disable_prev')
             prevBtn.classList.remove('disable_prev')
         }

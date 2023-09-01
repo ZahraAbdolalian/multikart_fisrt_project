@@ -82,6 +82,10 @@ body.dark{
 .dark .odrer_title h2 {
     color: #cfd4da;
 }
+
+.dark .user_input {
+    color: #cfd4da;
+}
 /* title */
 .title {
     background-color: #f8f8f8;
