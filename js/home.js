@@ -169,19 +169,19 @@ function addProductToContainer(product) {
                 <img class="trending_img" src=${product.src} alt="">
                 </a>
                 <div class="trending_icons">
-                    <a class="trending_icons_link" href="#">
+                    <a title="Add to cart" class="trending_icons_link" href="#">
                         <i class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
                     </a>
 
-                    <a class="trending_icons_link" href="#">
+                    <a title="Add to Wishlist" class="trending_icons_link" href="#">
                      <i class="fa fa-heart shopping heart"></i>
                     </a>
 
-                    <a class="trending_icons_link" href="#">
+                    <a title="Quick View" class="trending_icons_link" href="#">
                         <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
                     </a>
 
-                    <a class="trending_icons_link" href="#">
+                    <a title="Compare" class="trending_icons_link" href="#">
                         <i class="fa fa-refresh shopping refresh"></i>
                     </a>
                 </div>
@@ -285,19 +285,19 @@ trendingArray2.forEach(product => {
                     <img class="trending_img" src="${product.src}" alt="">
                 </a>
                 <div class="trending_icons_part2">
-                    <a class="trending_icons_link" href="#">
+                    <a title="Add to cart" class="trending_icons_link" href="#">
                         <i class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
                     </a>
 
-                    <a class="trending_icons_link" href="#">
+                    <a title="Add to Wishlist" class="trending_icons_link" href="#">
                         <i class="fa fa-heart shopping heart"></i>
                     </a>
 
-                    <a class="trending_icons_link" href="#">
+                    <a title="Quick View" class="trending_icons_link" href="#">
                         <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
                     </a>
 
-                    <a class="trending_icons_link" href="#">
+                    <a title="Compare" class="trending_icons_link" href="#">
                         <i class="fa fa-refresh shopping refresh"></i>
                     </a>
                 </div>
@@ -373,10 +373,3 @@ storyArray.forEach(story => {
     )
 })
 
-
-// // darkLight
-// let darkLightBtn = $.querySelector('.dark_light_btn')
-
-// darkLightBtn.addEventListener('click', () => {
-//     $.body.classList.toggle('dark')
-// })

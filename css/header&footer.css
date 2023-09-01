@@ -252,10 +252,6 @@
 
 /* navbar */
 
-/* .sidebar{
-    overflow-y: auto;
-} */
-
 .open .sidebar_menu{
     transition: all 0.5s ease; 
     left: 0;
@@ -428,7 +424,7 @@
 
 .sticky{
     width: 100%;
-    z-index: 10000;
+    z-index: 1;
     transition: all 300ms ease;
     position: fixed;
     top: 0;
@@ -988,4 +984,207 @@ a {
     transition: all 0.5s ease;
     cursor: pointer;
     font-size: 14px;
+}
+
+
+/* setting box */
+
+.setting_box {
+    position: fixed;
+    right: -360px;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 999;
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    transition: all 0.5s ease;
+    overflow-y: auto;
+}
+
+.setting_box.active{
+    transition: all 0.5s ease; 
+    right: 0px;
+}
+
+.setting_wrapper::-webkit-scrollbar{
+    width: 3px;
+    height: 7px;
+}
+
+.setting_wrapper::-webkit-scrollbar-thumb{
+    background: #888888;
+}
+
+.setting_wrapper::-webkit-scrollbar-track{
+    background: #dddddd;
+}
+
+.setting_box_container {
+    position: relative;
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+.setting_back_btn {
+    padding: 20px;
+    cursor: pointer;
+    color: #222222;
+    text-transform: uppercase;
+    background-color: #f3f3f3;
+    box-shadow: inset 0px 0px 6px rgba(115, 115, 115, 0.09);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.setting_back_btn i {
+    font-size: 13px;
+    margin-right: 7px;
+}
+
+.setting_box_title {
+    border-bottom: 1px solid #efefef;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.setting_box_title h4 {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.54px;
+    line-height: 1;
+}
+
+.setting_box_title i {
+    font-size: 14px;
+}
+
+.setting_wrapper {
+    padding: 0px;
+    max-height: 0px;
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #efefef;
+}
+
+.setting_wrapper.open {
+    padding: 20px;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+.setting_item {
+    width: 50%;
+    margin-bottom: 30px;
+    padding-right: 24px;
+}
+
+.setting_wrapper:nth-child(odd){
+    padding-right: 0px;
+}
+
+.setting_img {
+    width: 100%;
+    height: 110px;
+    transition: all 2s ease-out 0s;
+    box-shadow: -1px 2px 5px 1px #ececec;
+}
+
+.setting_item div h4 {
+    text-transform: capitalize;
+    color: #000000;
+    margin-top: 10px;
+    font-weight: 400;
+    letter-spacing: 0.48;
+    line-height: 1;
+}
+
+.setting_box_btn {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting_box_btn a {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    width: 90px;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--main-color);
+    transition: 0.3s ease-in-out;
+    line-height: 20px;
+}
+
+.setting_box_btn:hover a {
+    color: #ffffff;
+    background-color: var(--main-color);
+}
+
+.color_picker input{
+    width: 34px;
+    height: 38px;
+    margin-right: 5px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.color_picker span{
+    padding-top: 9px;
+    text-transform: capitalize;
+}
+
+.rtl div{
+    width: 49%;
+    padding-right: 12px;
+}
+
+.rtl div a{
+    background-color: var(--main-color);
+    width: 100%;
+    color: #ffffff;
+    display: block;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 12px;
+    text-align: center;
+}
+
+.setting_box_bottom{
+    padding: 20px;
+}
+
+.setting_box_bottom a{
+    padding: 10px;
+    display: block;
+    color: #3c3c3c;
+    background-color: #f3f3f3;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.setting_box_bottom a i {
+    margin-right: 5px;
+}
+
+.setting_box_bottom a img{
+    filter: grayscale(100%);
+    vertical-align: middle;
 }

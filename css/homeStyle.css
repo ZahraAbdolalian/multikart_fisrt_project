@@ -1,4 +1,4 @@
-:root{
+:root {
     --main-color: #ff4c3b
 }
 
@@ -22,33 +22,41 @@ body {
 .dark .category_product_box {
     border-color: #404040;
 }
-.dark .category_title{
+
+.dark .category_title {
     color: #e7eaec;
 }
+
 .dark .trending_products_part1 {
     background-color: #232323;
     transition: all 0.3s ease;
 }
+
 .dark h2 {
     color: #f1f3f5;
 }
+
 .dark .trending_icons_part2,
-.dark .special_icons{
+.dark .special_icons {
     background-color: #2b2b2b;
     transition: all 0.3s ease;
     box-shadow: none;
 }
-.dark .recent_story{
+
+.dark .recent_story {
     background-color: #404040;
     transition: all 0.3s ease;
 }
-.dark h4{
+
+.dark h4 {
     color: #e7eaec;
 }
+
 .dark p {
     color: #cfd4da;
 }
-.dark .service_container ,
+
+.dark .service_container,
 .dark .service_container div {
     border-color: #404040;
 }
@@ -60,7 +68,7 @@ ul {
 /* slider */
 
 .slider {
-    
+
     width: 100%;
     height: 75vh;
     background-size: cover;
@@ -70,21 +78,28 @@ ul {
     padding: 35px;
     position: relative;
 }
-.slider_bgi1{
+
+.slider_bgi1 {
     background-image: url(../images/9.jpg);
 }
-.slider_bgi2{
+
+.slider_bgi2 {
     background-image: url(../images/10.jpg);
 }
 
-.slider_effect{
+.slider_effect {
     animation-name: slider_effect;
     animation-duration: 1.5s;
 }
 
 @keyframes slider_effect {
-    from{left: 0;}
-    to{left: 100px;}
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100px;
+    }
 }
 
 .slider_contents {
@@ -145,7 +160,7 @@ ul {
 }
 
 .arrow_left,
-.arrow_right{
+.arrow_right {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.5);
     top: 50%;
@@ -165,30 +180,30 @@ ul {
     cursor: pointer;
 }
 
-.arrow_right{
+.arrow_right {
     right: 1px;
 }
 
-.arrow_left{
+.arrow_left {
     left: 1px;
 }
 
 .arrow_left i,
-.arrow_right i{
+.arrow_right i {
     color: #212529;
     font-size: 8px;
 }
 
-.slider:hover .arrow_left{
+.slider:hover .arrow_left {
     left: 100px;
 }
 
-.slider:hover .arrow_right{
+.slider:hover .arrow_right {
     right: 100px;
 }
 
 .slider:hover .arrow_left,
-.slider:hover .arrow_right{
+.slider:hover .arrow_right {
     opacity: 1;
     transform: scale(2.5);
     transition: all 0.5s ease;
@@ -345,20 +360,51 @@ ul {
     font-size: 14px;
     border: 2px solid var(--main-color);
     transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.category_link::before {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    background-color: var(--main-color);
+    transition: 0.5s all ease;
+}
+
+.category_link:hover::before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
 }
 
 .category_link:hover {
-
     color: #fff;
     background-color: var(--main-color);
     transition: 0.3s ease-in-out;
 }
 
-.category_product_box:hover {
-    border-color: var(--main-color);
-    transition: all 0.5s ease;
+
+
+.category_product_box {
+
+    --_g: #0000 25%, var(--main-color) 0;
+    background:
+        conic-gradient(from 180deg at top 1px right 1px, var(--_g)) var(--_i, 200%) 0 /200% var(--_i, 1px) no-repeat,
+        conic-gradient(at bottom 1px left 1px, var(--_g)) 0 var(--_i, 200%)/var(--_i, 1px) 200% no-repeat;
+    transition: 0.3s, background-position 0.3s 0.3s;
+    cursor: pointer;
 }
 
+.category_product_box:hover {
+    --_i: 100%;
+    transition: 0.3s, background-size 0.3s 0.3s;
+}
 
 /* trending_products part1*/
 
@@ -368,13 +414,13 @@ ul {
     transition: opacity 0.15s linear;
 }
 
-.new_arrival ,
-.on_sale ,
-.best_sellers{
+.new_arrival,
+.on_sale,
+.best_sellers {
     display: none;
 }
 
-.selected_container{
+.selected_container {
     display: block;
     transition: opacity 0.15s linear;
 }
@@ -664,11 +710,11 @@ ul {
     background-color: palegoldenrod;
 }
 
-.dimgrey{
+.dimgrey {
     background-color: dimgrey;
 }
 
-.black{
+.black {
     background-color: black;
 }
 
@@ -1100,4 +1146,7 @@ ul {
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
 }
+
+
+
 
